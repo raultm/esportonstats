@@ -1,0 +1,167 @@
+<items termsofuse="https://boardgamegeek.com/xmlapi/termsofuse">
+    <item type="boardgame" id="352515">
+        <thumbnail>https://cf.geekdo-images.com/d9F0ZDqcN3J7J92WckyraQ__thumb/img/8d663Cj-RQy8pA8gZOcO80xYI5I=/fit-in/200x150/filters:strip_icc()/pic7605785.jpg</thumbnail>
+        <image>https://cf.geekdo-images.com/d9F0ZDqcN3J7J92WckyraQ__original/img/3OAIArHm3Z_j5bAJeJlU5LKQie0=/0x0/filters:format(jpeg)/pic7605785.jpg</image>
+        <name type="primary" sortindex="1" value="Trio" />
+        <name type="alternate" sortindex="1" value="nana" />
+        <name type="alternate" sortindex="1" value="Трио" />
+        <name type="alternate" sortindex="1" value="Тріо" />
+        <name type="alternate" sortindex="1" value="トリオ" />
+        <name type="alternate" sortindex="1" value="ナナ" />
+        <name type="alternate" sortindex="1" value="回憶三重奏" />
+        <name type="alternate" sortindex="1" value="나나" />
+        <description>nana, which was later reprinted as Trio, is a card game in which players are
+            looking for three of a kind.&#10;&#10;The deck consists of 36 cards, numbered 1-12 three
+            times. Players receive some cards in hand, which they are required to sort from low to
+            high, and the remaining cards are placed face down on the table.&#10;&#10;On your turn,
+            choose any single card to reveal, either the low or high card from a player's hand
+            (including your own) or any face-down card from the table. Then, do this again. If the
+            two cards show the same number, continue your turn; if they do not, return the cards to
+            where they came from and end your turn.&#10;&#10;If you reveal three cards showing the
+            same number, take these cards as a set in front of you. If you are the first player to
+            collect three sets, you win &mdash; except that a player wins immediately if they
+            collect the set of 7s or two sets that add or subtract to 7, e.g., 4s and
+            11s.&#10;&#10;Note that nana and Trio contain identical components, but nana is labeled
+            for 2-5 players, while Trio is labeled for 3-6 players. Trio has slight changes to the
+            rules, with players using all cards no matter the player count. Additionally, you play
+            in normal mode &mdash; winning with three sets or the 7s &mdash; or &quot;spicy&quot;
+            mode, winning with two linked sets or the 7s. Finally, Trio includes rules for playing
+            in teams with four or six players.&#10;&#10;</description>
+        <yearpublished value="2021" />
+        <minplayers value="3" />
+        <maxplayers value="6" />
+        <poll name="suggested_numplayers" title="User Suggested Number of Players" totalvotes="94">
+            <results numplayers="1">
+                <result value="Best" numvotes="0" />
+                <result value="Recommended" numvotes="0" />
+                <result value="Not Recommended" numvotes="50" />
+            </results>
+            <results numplayers="2">
+                <result value="Best" numvotes="0" />
+                <result value="Recommended" numvotes="9" />
+                <result value="Not Recommended" numvotes="48" />
+            </results>
+            <results numplayers="3">
+                <result value="Best" numvotes="7" />
+                <result value="Recommended" numvotes="43" />
+                <result value="Not Recommended" numvotes="20" />
+            </results>
+            <results numplayers="4">
+                <result value="Best" numvotes="55" />
+                <result value="Recommended" numvotes="22" />
+                <result value="Not Recommended" numvotes="0" />
+            </results>
+            <results numplayers="5">
+                <result value="Best" numvotes="30" />
+                <result value="Recommended" numvotes="29" />
+                <result value="Not Recommended" numvotes="3" />
+            </results>
+            <results numplayers="6">
+                <result value="Best" numvotes="19" />
+                <result value="Recommended" numvotes="26" />
+                <result value="Not Recommended" numvotes="9" />
+            </results>
+            <results numplayers="6+">
+                <result value="Best" numvotes="1" />
+                <result value="Recommended" numvotes="1" />
+                <result value="Not Recommended" numvotes="28" />
+            </results>
+        </poll>
+        <poll-summary name="suggested_numplayers" title="User Suggested Number of Players">
+            <result name="bestwith" value="Best with 4 players" />
+            <result name="recommmendedwith" value="Recommended with 3–6 players" />
+        </poll-summary>
+        <playingtime value="15" />
+        <minplaytime value="15" />
+        <maxplaytime value="15" />
+        <minage value="6" />
+        <poll name="suggested_playerage" title="User Suggested Player Age" totalvotes="18">
+            <results>
+                <result value="2" numvotes="0" />
+                <result value="3" numvotes="0" />
+                <result value="4" numvotes="0" />
+                <result value="5" numvotes="3" />
+                <result value="6" numvotes="7" />
+                <result value="8" numvotes="7" />
+                <result value="10" numvotes="1" />
+                <result value="12" numvotes="0" />
+                <result value="14" numvotes="0" />
+                <result value="16" numvotes="0" />
+                <result value="18" numvotes="0" />
+                <result value="21 and up" numvotes="0" />
+            </results>
+        </poll>
+        <poll name="language_dependence" title="Language Dependence" totalvotes="18">
+            <results>
+                <result level="11" value="No necessary in-game text" numvotes="18" />
+                <result level="12"
+                    value="Some necessary text - easily memorized or small crib sheet" numvotes="0" />
+                <result level="13" value="Moderate in-game text - needs crib sheet or paste ups"
+                    numvotes="0" />
+                <result level="14"
+                    value="Extensive use of text - massive conversion needed to be playable"
+                    numvotes="0" />
+                <result level="15" value="Unplayable in another language" numvotes="0" />
+            </results>
+        </poll>
+        <link type="boardgamecategory" id="1089" value="Animals" />
+        <link type="boardgamecategory" id="1002" value="Card Game" />
+        <link type="boardgamemechanic" id="3007" value="Matching" />
+        <link type="boardgamemechanic" id="2047" value="Memory" />
+        <link type="boardgamemechanic" id="3102" value="Questions and Answers" />
+        <link type="boardgamemechanic" id="2004" value="Set Collection" />
+        <link type="boardgamefamily" id="70360" value="Digital Implementations: Board Game Arena" />
+        <link type="boardgamefamily" id="6364" value="Holidays: Christmas" />
+        <link type="boardgamefamily" id="59705" value="Misc: LongPack Games" />
+        <link type="boardgameimplementation" id="401168" value="nana: Christmas Edition" />
+        <link type="boardgameimplementation" id="417920" value="Slotters: Phantom Seven"
+            inbound="true" />
+        <link type="boardgamedesigner" id="72830" value="宮野 華也 (Kaya Miyano)" />
+        <link type="boardgameartist" id="145855" value="Laura Michaud" />
+        <link type="boardgameartist" id="108040" value="別府さい (Sai Beppu)" />
+        <link type="boardgamepublisher" id="2691" value="Cocktail Games" />
+        <link type="boardgamepublisher" id="50472" value="Mob+ (Mob Plus)" />
+        <link type="boardgamepublisher" id="7162" value="Brain Games" />
+        <link type="boardgamepublisher" id="9068" value="Broadway Toys LTD" />
+        <link type="boardgamepublisher" id="2366" value="Devir" />
+        <link type="boardgamepublisher" id="39390" value="Engames" />
+        <link type="boardgamepublisher" id="48438" value="Games7Days" />
+        <link type="boardgamepublisher" id="4785" value="Ghenos Games" />
+        <link type="boardgamepublisher" id="55478" value="Happy Camper" />
+        <link type="boardgamepublisher" id="3218" value="Lautapelit.fi" />
+        <link type="boardgamepublisher" id="9325" value="Lifestyle Boardgames Ltd" />
+        <link type="boardgamepublisher" id="30399" value="Ludicus" />
+        <link type="boardgamepublisher" id="51614" value="MIPL" />
+        <link type="boardgamepublisher" id="32581" value="PaperGames (III)" />
+        <link type="boardgamepublisher" id="28648" value="Randolph" />
+        <link type="boardgamepublisher" id="7466" value="Rebel Sp. z o.o." />
+        <link type="boardgamepublisher" id="36563" value="Reflexshop" />
+        <link type="boardgamepublisher" id="21053" value="REXhry" />
+        <link type="boardgamepublisher" id="9215" value="TWOPLUS Games" />
+        <link type="boardgamepublisher" id="46428" value="Underdog Games (II)" />
+        <statistics page="1">
+            <ratings>
+                <usersrated value="5231" />
+                <average value="7.33673" />
+                <bayesaverage value="6.7562" />
+                <ranks>
+                    <rank type="subtype" id="1" name="boardgame" friendlyname="Board Game Rank"
+                        value="774" bayesaverage="6.7562" />
+                    <rank type="family" id="5498" name="partygames" friendlyname="Party Game Rank"
+                        value="40" bayesaverage="6.97851" />
+                    <rank type="family" id="5499" name="familygames" friendlyname="Family Game Rank"
+                        value="195" bayesaverage="6.87516" />
+                </ranks>
+                <stddev value="1.36156" />
+                <median value="0" />
+                <owned value="10728" />
+                <trading value="52" />
+                <wanting value="159" />
+                <wishing value="1291" />
+                <numcomments value="940" />
+                <numweights value="110" />
+                <averageweight value="1.0364" />
+            </ratings>
+        </statistics>
+    </item>
+</items>

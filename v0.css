@@ -1,0 +1,270 @@
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+}
+
+.container {
+    width: 80%;
+    margin: auto;
+    overflow: hidden;
+    padding: 20px;
+    background-color: white;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+
+h1 {
+    color: #333;
+    text-align: center;
+}
+
+.tabs {
+    display: flex;
+    justify-content: space-around;
+    margin-bottom: 20px;
+}
+
+.tab-button {
+    background-color: #f4f4f4;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.tab-button:hover {
+    background-color: #ddd;
+}
+
+.tab-button.active {
+    background-color: #333;
+    color: white;
+}
+
+.tab-content {
+    background-color: white;
+    padding: 20px;
+    border-radius: 5px;
+}
+
+.tab-pane {
+    display: none;
+}
+
+.tab-pane.active {
+    display: block;
+}
+
+.decoration {
+    display: block;
+    margin: 20px auto;
+    max-width: 100%;
+}
+
+@media (max-width: 600px) {
+    .container {
+        width: 95%;
+    }
+    
+    .tabs {
+        flex-direction: column;
+    }
+    
+    .tab-button {
+        margin-bottom: 5px;
+    }
+}
+
+
+.leaderboard-list {
+    display: flex; /* Alineación en horizontal */
+    flex-wrap: wrap; /* Permite salto a la siguiente línea */
+    gap: 1rem; /* Espacio entre elementos */
+    padding: 0;
+    margin: 0;
+    list-style: none; /* Quita las viñetas de la lista */
+  }
+
+.cards {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
+    justify-content: space-between;
+}
+
+/* Estilo para cada tarjeta */
+.card {
+    background: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    transition: transform 0.3s ease;
+    padding: 1rem;
+    width: calc(25% - 1rem); /* 4 tarjetas por fila, ajusta según tu diseño */
+    flex: 0 0 auto; /* Evita que se redimensionen automáticamente */
+  }
+  
+  .card:hover {
+    transform: translateY(-5px);
+  }
+  
+  .card img {
+    width: 100%;
+    height: auto;
+    border-radius: 4px;
+    margin-bottom: 0.5rem;
+  }
+  
+  .card .card-info {
+    font-size: 1rem;
+    font-weight: bold;
+    color: #1c3d58;
+  }
+  
+  .card .card-info span {
+    font-weight: normal;
+    color: #555;
+  }
+
+  .leaderboard-list {
+    width: 100%;
+  }
+  .leaderboard-list li {
+    background: #f9f9f9;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    padding: 1rem;
+    width: calc(25% - 1rem); /* 4 tarjetas por fila */
+    transition: transform 0.3s ease;
+  }
+  
+  .leaderboard-list li:hover {
+    transform: translateY(-5px);
+  }
+  
+  /* Imagen */
+  .leaderboard-list img {
+    width: auto; /* La imagen ocupa el ancho de la tarjeta */
+    height: 150px;
+    border-radius: 4px;
+    margin-bottom: 0.5rem;
+  }
+  
+  /* Información dentro de cada tarjeta */
+  .leaderboard-list div {
+    font-size: 1.1rem;
+    font-weight: bold;
+    color: #1c3d58;
+  }
+  
+  .leaderboard-list span {
+    display: block; /* Nombre y total en línea nueva */
+    font-weight: normal;
+    color: #555;
+  }
+
+.leaderboard-list li:first-child {
+    background-color: #ffd700; /* Gold color for first place */
+    font-weight: bold;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.leaderboard-list li:nth-child(2) {
+    background-color: #c0c0c0; /* Silver color for second place */
+}
+
+.leaderboard-list li:nth-child(3) {
+    background-color: #cd7f32; /* Bronze color for third place */
+}
+
+/* .leaderboard-list li img {
+    height: 40px;
+    margin-right: 1rem;
+} */
+
+.leaderboard-list li span {
+    margin-left: 10px;
+}
+
+/* Lista de elementos */
+.top5-list {
+    display: flex; /* Coloca los elementos horizontalmente */
+    justify-content: space-between;
+    gap: 1rem; /* Espacio entre elementos */
+    padding: 0;
+    margin: 0;
+    list-style: none; /* Quitar viñetas */
+  }
+  
+  /* Cada elemento (tarjeta) */
+  .top-item {
+    flex: 1 1 20%; /* 20% asegura que 5 elementos entren en una fila */
+    max-width: 20%; /* Limita el ancho máximo */
+    background: #f9f9f9;
+    border-radius: 8px;
+    text-align: center;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    padding: 1rem;
+    transition: transform 0.3s ease;
+  }
+  
+  .top-item:hover {
+    transform: translateY(-5px);
+  }
+  
+  /* Colores especiales según posición usando :nth-child() */
+  .top-item:nth-child(1) {
+    background: #ffd700; /* Oro */
+    color: #000;
+  }
+  
+  .top-item:nth-child(2) {
+    background: #c0c0c0; /* Plata */
+    color: #000;
+  }
+  
+  .top-item:nth-child(3) {
+    background: #cd7f32; /* Bronce */
+    color: #000;
+  }
+  
+  /* Imagen dentro de cada tarjeta */
+  .top-item img {
+    width: 160px;
+    height: 160px;
+    object-fit: contain;
+    border-radius: 10%;
+    margin-bottom: 0.5rem;
+  }
+  
+  /* Número de posición */
+  .top-item .rank {
+    font-size: 1.5rem;
+    font-weight: bold;
+    display: block;
+    margin-bottom: 0.5rem;
+  }
+  
+  /* Información */
+  .top-item .info {
+    font-size: 1rem;
+    font-weight: bold;
+    color: #333;
+  }
+  
+  /* Media Query para dispositivos móviles */
+  @media (max-width: 768px) {
+    .top5-list {
+      flex-direction: column; /* Cambia a disposición vertical */
+      gap: 0.5rem;
+    }
+  
+    .top-item {
+      flex: 1 1 100%; /* Ocupa todo el ancho en móviles */
+      max-width: 100%;
+    }
+  }
+  

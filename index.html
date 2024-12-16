@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Colección de Partidas</title>
+    <link rel="stylesheet" href="v0.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Esportón Ludico</h1>
+        <div class="tabs">
+            <button class="tab-button active" data-tab="tops">Tops</button>
+            <!-- <button class="tab-button" data-tab="explorar">Explorar partidas</button> -->
+            <!-- <button class="tab-button" data-tab="curiosos">Datos curiosos</button> -->
+            <!-- <button class="tab-button" data-tab="ludoteca">Ludoteca</button> -->
+        </div>
+        <div class="tab-content">
+            <div id="tops" class="tab-pane active">
+                <div id="leaders" style="display: block;">
+                    <section class="dashboard-section">
+                        <h2>Últimos tres meses</h2>
+                            <h3>Juegos con más partidas</h3>
+                            <ul id="last-three-months-games" class="top5-list"></ul>
+                                <h3>Usuarios más activos</h3>
+                                <ul id="last-three-months-users" class="top5-list"></ul>
+                                <h3>Lugares habituales</h3>
+                                <ul id="last-three-months-locations" class="top5-list"></ul>
+                        </div>
+                    </section>
+        
+                    <section class="dashboard-section">
+                        <h2>Durante el año 2024</h2>
+                                <h3>Juegos con más partidas</h3>
+                                <ul id="year-games" class="top5-list"></ul>
+                                <h3>Usuarios más activos</h3>
+                                <ul id="year-users" class="top5-list"></ul>
+                                <h3>Lugares habituales</h3>
+                                <ul id="year-locations" class="top5-list"></ul>
+                        </div>
+                    </section>
+                </div>
+                
+            </div>
+            <div id="explorar" class="tab-pane">
+                <div id="games" style="display: none;">
+                    <div id="wrapper"></div>
+                </div>
+            </div>
+            <div id="curiosos" class="tab-pane">
+                <h2>Datos curiosos</h2>
+                <p>Comparte estadísticas interesantes y hechos divertidos sobre tus partidas y juegos.</p>
+            </div>
+            <div id="ludoteca" class="tab-pane">
+                <h2>Ludoteca</h2>
+                <p>Muestra un catálogo completo de todos los juegos en tu colección.</p>
+            </div>
+        </div>
+    </div>
+    <script src="web/sql.js"></script>
+    <script src="v0.js"></script>
+</body>
+</html>
+

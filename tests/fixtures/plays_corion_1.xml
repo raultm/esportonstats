@@ -1,0 +1,28 @@
+<plays username="corion" userid="1604925" total="104" page="1"
+    termsofuse="https://boardgamegeek.com/xmlapi/termsofuse">
+    <play id="91827101" date="2024-11-30" quantity="1" length="0" incomplete="0" nowinstats="0"
+        location="Almendralejo">
+        <item name="The Quacks of Quedlinburg" objecttype="thing" objectid="244521">
+            <subtypes>
+                <subtype value="boardgame" />
+            </subtypes>
+        </item>
+        <comments>#BGGCatalog</comments>
+        
+    </play>
+    <play id="91791155" date="2024-11-29" quantity="1" length="0" incomplete="0" nowinstats="0"
+        location="Almendralejo">
+        <item name="Sabika" objecttype="thing" objectid="360265">
+            <subtypes>
+                <subtype value="boardgame" />
+            </subtypes>
+        </item>
+        <comments>#BGGCatalog</comments>
+        <players>
+            <player username="corion" userid="1604925" name="Juan Carlos Villanueva"
+                startposition="" color="" score="null" new="0" rating="0" win="0" />
+            <player username="" userid="0" name="Mikel" startposition="" color="" score="null"
+                new="0" rating="0" win="1" />
+        </players>
+    </play>
+</plays>

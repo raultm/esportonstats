@@ -1,0 +1,77 @@
+<plays username="corion" userid="1604925" total="104" page="2"
+    termsofuse="https://boardgamegeek.com/xmlapi/termsofuse">
+    <play id="80695247" date="2024-01-26" quantity="1" length="0" incomplete="0" nowinstats="0"
+        location="Almendralejo">
+        <item name="Nemesis" objecttype="thing" objectid="167355">
+            <subtypes>
+                <subtype value="boardgame" />
+                <subtype value="boardgameintegration" />
+            </subtypes>
+        </item>
+        <comments>#BGGCatalog</comments>
+        <players>
+            <player username="" userid="0" name="Jose jornadas" startposition="" color=""
+                score="null" new="0" rating="0" win="0" />
+            <player username="corion" userid="1604925" name="Juan Carlos Villanueva"
+                startposition="" color="" score="null" new="0" rating="0" win="0" />
+            <player username="" userid="0" name="Manu (Granada)" startposition="" color=""
+                score="null" new="0" rating="0" win="0" />
+            <player username="" userid="0" name="Sergio Mene" startposition="" color="" score="null"
+                new="0" rating="0" win="0" />
+        </players>
+    </play>
+    <play id="80522307" date="2024-01-21" quantity="1" length="0" incomplete="0" nowinstats="0"
+        location="Almendralejo">
+        <item name="Bitoku" objecttype="thing" objectid="323612">
+            <subtypes>
+                <subtype value="boardgame" />
+            </subtypes>
+        </item>
+        <comments>#BGGCatalog</comments>
+        <players>
+            <player username="corion" userid="1604925" name="Juan Carlos Villanueva"
+                startposition="" color="" score="null" new="0" rating="0" win="0" />
+            <player username="" userid="0" name="Mikel" startposition="" color="" score="null"
+                new="0" rating="0" win="1" />
+            <player username="" userid="0" name="Luis" startposition="" color="" score="null"
+                new="0" rating="0" win="0" />
+        </players>
+    </play>
+    <play id="80522256" date="2024-01-17" quantity="1" length="0" incomplete="0" nowinstats="0"
+        location="Almendralejo">
+        <item name="Combat Commander: Europe" objecttype="thing" objectid="21050">
+            <subtypes>
+                <subtype value="boardgame" />
+            </subtypes>
+        </item>
+        <comments>#BGGCatalog</comments>
+        <players>
+            <player username="corion" userid="1604925" name="Juan Carlos Villanueva"
+                startposition="" color="" score="null" new="0" rating="0" win="0" />
+            <player username="csibadajoz" userid="41868" name="Raul Lopezosa" startposition=""
+                color="" score="null" new="0" rating="0" win="1" />
+        </players>
+    </play>
+    <play id="79713617" date="2024-01-03" quantity="1" length="0" incomplete="0" nowinstats="0"
+        location="Almendralejo">
+        <item name="El Capitán" objecttype="thing" objectid="29972">
+            <subtypes>
+                <subtype value="boardgame" />
+                <subtype value="boardgameimplementation" />
+            </subtypes>
+        </item>
+        <comments>#BGGCatalog</comments>
+        <players>
+            <player username="corion" userid="1604925" name="Juan Carlos Villanueva"
+                startposition="" color="" score="null" new="0" rating="0" win="0" />
+            <player username="" userid="0" name="Mikel" startposition="1" color="" score="null"
+                new="0" rating="0" win="0" />
+            <player username="csibadajoz" userid="41868" name="Raul Lopezosa" startposition="2"
+                color="" score="null" new="0" rating="0" win="1" />
+            <player username="" userid="0" name="Sergio Mene" startposition="3" color=""
+                score="null" new="0" rating="0" win="0" />
+            <player username="" userid="0" name="Anonymous player" startposition="4" color=""
+                score="null" new="0" rating="0" win="0" />
+        </players>
+    </play>
+</plays>

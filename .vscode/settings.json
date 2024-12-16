@@ -1,0 +1,8 @@
+{
+    "conventionalCommits.scopes": [
+        "partidas",
+        "rawdb",
+        "normalizedDB",
+        "front"
+    ]
+}

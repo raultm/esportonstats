@@ -1,0 +1,284 @@
+/* General Styles */
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    color: #333;
+    background: #f0f4f8;
+}
+
+header {
+    text-align: center;
+    padding: 4rem 2rem; /* Más espacio para destacar el diseño */
+    background: #AA1c3d58;
+    color: #fff;
+    position: relative; /* Para posicionar el fondo SVG */
+    overflow: hidden; /* Para evitar que sobresalga el SVG */
+}
+
+header::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: url('data:image/svg+xml,%3Csvg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320"%3E%3Cpath fill="%239ad3de" fill-opacity="1" d="M0,160L48,149.3C96,139,192,117,288,101.3C384,85,480,75,576,69.3C672,64,768,64,864,85.3C960,107,1056,149,1152,149.3C1248,149,1344,107,1392,85.3L1440,64L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z"%3E%3C/path%3E%3C/svg%3E') no-repeat center center;
+    background-size: cover; /* Escalar bien el SVG */
+    z-index: -1; /* Colocar detrás del contenido */
+}
+
+header h1 {
+    margin: 0;
+    font-size: 2.8rem;
+    font-weight: bold;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.4); /* Sutil sombra para resaltar */
+}
+
+header p {
+    margin: 0.5rem 0 0;
+    font-size: 1.3rem;
+    font-weight: 300;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.3); /* Resaltar el subtítulo */
+}
+
+
+main {
+    padding: 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* Dashboard Styles */
+.dashboard-section {
+    margin-bottom: 3rem;
+}
+
+.cards {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
+    justify-content: space-between;
+}
+
+.card {
+    background: #fff;
+    border-radius: 8px;
+    padding: 1.5rem;
+    flex: 1 1 calc(33% - 2rem);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+}
+
+.card h3 {
+    margin-top: 0;
+    font-size: 1.6rem;
+    font-weight: bold;
+    color: #1c3d58;
+}
+
+/* Leaderboard List Styles */
+.leaderboard-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.leaderboard-list li {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1rem;
+    border-bottom: 1px solid #e0e0e0;
+    background: #f9fafb;
+    border-radius: 5px;
+    margin-bottom: 0.5rem;
+}
+
+.leaderboard-list li:first-child {
+    background-color: #ffd700; /* Gold color for first place */
+    font-weight: bold;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.leaderboard-list li:nth-child(2) {
+    background-color: #c0c0c0; /* Silver color for second place */
+}
+
+.leaderboard-list li:nth-child(3) {
+    background-color: #cd7f32; /* Bronze color for third place */
+}
+
+.leaderboard-list li img {
+    /* width: 40px; */
+    height: 40px;
+    /* border-radius: 50%; */
+    margin-right: 1rem;
+}
+
+.leaderboard-list li span {
+    margin-left: 10px;
+}
+
+/* Button */
+.button {
+    display: inline-block;
+    background: #1c3d58;
+    color: #fff;
+    text-decoration: none;
+    padding: 1rem 2rem;
+    border-radius: 30px;
+    text-align: center;
+    font-size: 1.1rem;
+    font-weight: 600;
+    transition: background 0.3s ease;
+    margin-top: 3rem;
+}
+
+.button:hover {
+    background: #00567a;
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    padding: 1.5rem;
+    background: #1c3d58;
+    color: #fff;
+    position: relative;
+}
+
+footer a {
+    color: #fff;
+    text-decoration: none;
+}
+
+footer a:hover {
+    text-decoration: underline;
+}
+
+/* Media Queries */
+@media (max-width: 768px) {
+    .cards {
+        flex-direction: column;
+    }
+
+    .card {
+        flex: 1 1 100%;
+    }
+
+    .button {
+        width: 100%;
+    }
+}
+
+#toggle-view {
+    display: inline-block;
+    padding: 10px 20px;
+    font-size: 16px;
+    font-weight: bold;
+    color: #fff;
+    background: linear-gradient(45deg, #4CAF50, #2E7D32); /* Degradado verde */
+    border: none;
+    border-radius: 25px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2); /* Sombra elegante */
+    cursor: pointer;
+    transition: all 0.3s ease; /* Suavidad al interactuar */
+  }
+  
+  #toggle-view:hover {
+    background: linear-gradient(45deg, #2E7D32, #4CAF50); /* Invertir degradado */
+    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.3); /* Aumentar sombra */
+    transform: translateY(-2px); /* Efecto de flotación */
+  }
+  
+  #toggle-view:active {
+    transform: translateY(0); /* Restablecer cuando se presiona */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2); /* Menor sombra */
+  }
+  
+  #toggle-view:focus {
+    outline: none; /* Quitar contorno estándar */
+    box-shadow: 0 0 10px rgba(72, 239, 128, 0.8); /* Efecto de enfoque */
+  }
+
+  .category {
+    margin-bottom: 1em;
+    cursor: pointer;
+}
+.category-title {
+    font-size: 1.2em;
+    font-weight: bold;
+}
+.tips {
+    display: none;
+    margin-top: 0.5em;
+    padding-left: 1.5em;
+    color: #555;
+}
+.tips li {
+    margin-bottom: 0.5em;
+}
+  
+
+h1 {
+    text-align: center;
+    color: #2c3e50;
+    margin-bottom: 40px;
+    font-size: 2.5rem;
+    font-weight: bold;
+}
+
+.tips-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+}
+
+.card {
+    background: #fff;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    width: 300px;
+    padding: 20px;
+    transition: transform 0.3s ease;
+}
+
+.card:hover {
+    transform: translateY(-10px);
+}
+
+.card h2 {
+    margin-top: 0;
+    color: #3498db;
+    font-size: 1.6em;
+    font-weight: 600;
+    margin-bottom: 10px;
+}
+
+.card p {
+    color: #555;
+    font-size: 1rem;
+    margin-bottom: 15px;
+    line-height: 1.6;
+}
+
+.card ul {
+    padding-left: 20px;
+    margin-top: 10px;
+}
+
+.card ul li {
+    margin-bottom: 8px;
+    color: #777;
+}
+
+.card ul li::before {
+    margin-right: 8px;
+}

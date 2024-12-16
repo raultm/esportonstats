@@ -1,0 +1,52 @@
+<plays username="raultm" userid="598405" total="3" page="1"
+    termsofuse="https://boardgamegeek.com/xmlapi/termsofuse">
+    <play id="91523256" date="2024-11-22" quantity="1" length="0" incomplete="0" nowinstats="0"
+        location="Almendralejo, Badajoz, Spain">
+        <item name="Trio" objecttype="thing" objectid="352515">
+            <subtypes>
+                <subtype value="boardgame" />
+                <subtype value="boardgameimplementation" />
+            </subtypes>
+        </item>
+        <comments>Probando</comments>
+        <players>
+            <player username="corion" userid="1604925" name="Juan Carlos Villanueva"
+                startposition="" color="" score="" new="0" rating="0" win="0" />
+            <player username="raultm" userid="598405" name="Raul Tierno" startposition="" color=""
+                score="" new="0" rating="0" win="0" />
+        </players>
+    </play>
+    <play id="91306729" date="2024-11-16" quantity="1" length="0" incomplete="0" nowinstats="0"
+        location="">
+        <item name="Trio" objecttype="thing" objectid="352515">
+            <subtypes>
+                <subtype value="boardgame" />
+                <subtype value="boardgameimplementation" />
+            </subtypes>
+        </item>
+        <comments>#BGGCatalog</comments>
+        <players>
+            <player username="" userid="0" name="Anonymous player" startposition="" color=""
+                score="null" new="0" rating="0" win="0" />
+            <player username="" userid="0" name="Anonymous player" startposition="" color=""
+                score="null" new="0" rating="0" win="0" />
+            <player username="" userid="0" name="Anonymous player" startposition="" color=""
+                score="null" new="0" rating="0" win="0" />
+            <player username="" userid="0" name="Anonymous player" startposition="" color=""
+                score="null" new="0" rating="0" win="0" />
+            <player username="" userid="0" name="Anonymous player" startposition="" color=""
+                score="null" new="0" rating="0" win="0" />
+            <player username="" userid="0" name="Anonymous player" startposition="" color=""
+                score="null" new="0" rating="0" win="0" />
+        </players>
+    </play>
+    <play id="8495129" date="2012-12-06" quantity="1" length="60" incomplete="0" nowinstats="0"
+        location="Almendralejo, Badajoz, Spain">
+        <item name="Dixit" objecttype="thing" objectid="39856">
+            <subtypes>
+                <subtype value="boardgame" />
+                <subtype value="boardgameintegration" />
+            </subtypes>
+        </item>
+    </play>
+</plays>
