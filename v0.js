@@ -34,19 +34,23 @@ xhr.responseType = 'arraybuffer';
 xhr.onload = async e => {
     console.log("Leida sqlite")
     db = new SQL.Database(new Uint8Array(xhr.response))
-    const lastThreeMonthsGames = document.getElementById("last-three-months-games")
+    const lastThreeMonthsGamesInfluence = document.getElementById("last-three-months-games-influence")
+    const lastThreeMonthsGamesPlayed = document.getElementById("last-three-months-games-played")
     const lastThreeMonthsUsers = document.getElementById("last-three-months-users")
     const lastThreeMonthsLocations = document.getElementById("last-three-months-locations")
-    const yearGames = document.getElementById("year-games");
+    const yearGamesInfluence = document.getElementById("year-games-influence");
+    const yearGamesPlayed = document.getElementById("year-games-played");
     const yearUsers = document.getElementById("year-users");
     const yearLocations = document.getElementById("year-locations");
 
     const data = await fetchDashboardData();
-    //console.log(data)
-    renderList(lastThreeMonthsGames, data.lastThreeMonths.games)
+    console.log(data)
+    renderList(lastThreeMonthsGamesInfluence, data.lastThreeMonths.games.influence)
+    renderList(lastThreeMonthsGamesPlayed, data.lastThreeMonths.games.played)
     renderList(lastThreeMonthsUsers, data.lastThreeMonths.users, "cambiarImagenJugador")
     renderList(lastThreeMonthsLocations, data.lastThreeMonths.locations, "cambiarImagenLugar")
-    renderList(yearGames, data.year.games)
+    renderList(yearGamesInfluence, data.year.games.influence)
+    renderList(yearGamesPlayed, data.year.games.played)
     renderList(yearUsers, data.year.users, "cambiarImagenJugador")
     renderList(yearLocations, data.year.locations, "cambiarImagenLugar")
 
@@ -57,6 +61,7 @@ xhr.send();
 
 function renderList(element, data, fallbackImages = "cambiarImagenJuego") {
     console.log("renderList", element, data)
+    if(!data) { return 'No Data' }
     element.innerHTML = data
         .map(item => `<li class="top-item"><img id="imagen-principal" src="${item.image}" alt="${item.name}" onerror="${fallbackImages}(this)" />
 <br /><div class="info">${item.name} (<span>${item.total}</span>)</div></li>`)
@@ -87,7 +92,7 @@ function threeMonthsAgo() {
 }
 
 function top5(entitesCount) {
-    console.log("entitiesCount", entitesCount)
+    // console.log("entitiesCount", entitesCount)
     return Object.entries(entitesCount)
         .map(([id, {total, name, image}]) => ({ name, total, image}))
         .sort((a, b) => b.total - a.total)
@@ -95,7 +100,7 @@ function top5(entitesCount) {
 }
 
 function parsePlay(recorder, record, juegos, jugadores) {
-    console.log("record", record, juegos, jugadores, juegos[record[3]][1])
+    //console.log("record", record, juegos, jugadores, juegos[record[3]][1])
     return {
         id: record[0],
         date: record[1],
@@ -126,7 +131,7 @@ async function fetchDashboardData() {
     let partidas = execSQL("SELECT * FROM partidas")[0].values
     let juegos = arrayToObject(execSQL("SELECT * FROM juegos")[0].values)
     let jugadores = arrayToObject(execSQL("SELECT * FROM jugadores")[0].values)
-    console.log(juegos, jugadores)
+    //console.log(juegos, jugadores)
     const fields = [
         "id",
         "fecha",
@@ -138,17 +143,23 @@ async function fetchDashboardData() {
     
     //console.log(partidas[0])
     let partidasUltimos3Meses = partidas.filter((partida) => partida[1] > threeMonthsAgo())
-    console.log(partidasUltimos3Meses)
+    //console.log(partidasUltimos3Meses)
     return {
         tabla: partidas.map(partidaBGG => parsePlay("", partidaBGG, juegos, jugadores)),
         lastThreeMonths: {
-            games: top5(partidasUltimos3Meses.reduce(reduceJuegos(juegos), {})),
+            games: {
+                influence: top5(partidasUltimos3Meses.reduce(reduceJuegosPorInfluencia(juegos), {})),
+                played: top5(partidasUltimos3Meses.reduce(reduceJuegos(juegos), {})),
+            },
             users: top5(partidasUltimos3Meses.map(partidaBGG => parsePlay("", partidaBGG,juegos, jugadores)).reduce(reduceJugadores(jugadores), {})),
             locations: top5(partidasUltimos3Meses.map(partidaBGG => parsePlay(partidaBGG[1], partidaBGG, juegos, jugadores)).reduce(reduceLocations(), {}))
 
         },
         year: {
-            games: top5(partidas.reduce(reduceJuegos(juegos), {}), {}),
+            games: {
+                influence: top5(partidas.reduce(reduceJuegosPorInfluencia(juegos), {})),
+                played: top5(partidas.reduce(reduceJuegos(juegos), {}), {}),
+            },
             users: top5(partidas.map(partidaBGG => parsePlay("", partidaBGG,juegos, jugadores)).reduce(reduceJugadores(jugadores), {})),
             locations: top5(partidas.map(partidaBGG => parsePlay(partidaBGG[1], partidaBGG, juegos, jugadores)).reduce(reduceLocations(), {}))
 
@@ -169,13 +180,31 @@ function reduceJuegos(juegos) {
     };
 }
 
+function reduceJuegosPorInfluencia(juegos) {
+    
+    return (acc, partida) => {
+        // console.log("reduceJuegosPorInfluencia", acc, partida)
+        if(!acc[partida[3]]){
+            acc[partida[3]] = {
+                total: 0, 
+                name:juegos[partida[3]][1], 
+                image: juegos[partida[3]][3],
+                weight: juegos[partida[3]][4]
+            }
+        }
+        acc[partida[3]].total+= 1 * acc[partida[3]].weight;
+        acc[partida[3]].total = Math.round(acc[partida[3]].total * 100) / 100
+        return acc;
+    };
+}
+
 function reduceJugadores(jugadores) {
 
     return (acc, partida) => {
         partida.players
             .filter(player => player && jugadores[player.name][1] != "Anonymous player")    
             .map(player => {
-                console.log("player", player, jugadores[player.name])
+                // console.log("player", player, jugadores[player.name])
                 if(!acc[player.name]){
                     acc[player.name] = {total: 0, name:jugadores[player.name][1], image: jugadores[player.name][4] }
                 }
