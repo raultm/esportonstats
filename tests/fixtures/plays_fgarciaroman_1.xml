@@ -1,0 +1,702 @@
+<plays username="fgarciaroman" userid="2147317" total="43" page="1"
+    termsofuse="https://boardgamegeek.com/xmlapi/termsofuse">
+    <play id="84154316" date="2024-04-26" quantity="1" length="0" incomplete="0" nowinstats="0"
+        location="online">
+        <item name="Arkham Horror: The Card Game" objecttype="thing" objectid="205637">
+            <subtypes>
+                <subtype value="boardgame" />
+            </subtypes>
+        </item>
+        <comments>#BGGCatalog</comments>
+        <players>
+            <player username="fgarciaroman" userid="2147317" name="" startposition="" color=""
+                score="null" new="0" rating="0" win="1" />
+            <player username="" userid="0" name="Anonymous player" startposition="" color=""
+                score="null" new="0" rating="0" win="1" />
+            <player username="" userid="0" name="Anonymous player" startposition="" color=""
+                score="null" new="0" rating="0" win="1" />
+            <player username="" userid="0" name="Anonymous player" startposition="" color=""
+                score="null" new="0" rating="0" win="1" />
+        </players>
+    </play>
+    <play id="84154308" date="2024-04-25" quantity="1" length="0" incomplete="0" nowinstats="0"
+        location="online">
+        <item name="Arkham Horror: The Card Game" objecttype="thing" objectid="205637">
+            <subtypes>
+                <subtype value="boardgame" />
+            </subtypes>
+        </item>
+        <comments>#BGGCatalog</comments>
+        <players>
+            <player username="fgarciaroman" userid="2147317" name="" startposition="" color=""
+                score="null" new="0" rating="0" win="1" />
+            <player username="" userid="0" name="Carlos urquiz" startposition="" color=""
+                score="null" new="0" rating="0" win="1" />
+            <player username="" userid="0" name="fran" startposition="" color="" score="null"
+                new="0" rating="0" win="1" />
+            <player username="" userid="0" name="javi" startposition="" color="" score="null"
+                new="0" rating="0" win="1" />
+        </players>
+    </play>
+    <play id="84154292" date="2024-04-24" quantity="1" length="0" incomplete="0" nowinstats="0"
+        location="online">
+        <item name="Star Wars: Unlimited" objecttype="thing" objectid="387866">
+            <subtypes>
+                <subtype value="boardgame" />
+            </subtypes>
+        </item>
+        <comments>#BGGCatalog</comments>
+        <players>
+            <player username="fgarciaroman" userid="2147317" name="" startposition="" color=""
+                score="null" new="0" rating="0" win="1" />
+        </players>
+    </play>
+    <play id="84154373" date="2024-04-20" quantity="1" length="0" incomplete="0" nowinstats="0"
+        location="jupiter">
+        <item name="Star Wars: Unlimited" objecttype="thing" objectid="387866">
+            <subtypes>
+                <subtype value="boardgame" />
+            </subtypes>
+        </item>
+        <comments>#BGGCatalog</comments>
+        <players>
+            <player username="fgarciaroman" userid="2147317" name="" startposition="" color=""
+                score="null" new="0" rating="0" win="0" />
+        </players>
+    </play>
+    <play id="83442719" date="2024-04-06" quantity="1" length="0" incomplete="0" nowinstats="0"
+        location="jupiter">
+        <item name="Star Wars: Unlimited" objecttype="thing" objectid="387866">
+            <subtypes>
+                <subtype value="boardgame" />
+            </subtypes>
+        </item>
+        <comments>#BGGCatalog</comments>
+        <players>
+            <player username="fgarciaroman" userid="2147317" name="" startposition="" color=""
+                score="null" new="0" rating="0" win="0" />
+        </players>
+    </play>
+    <play id="83172085" date="2024-03-30" quantity="1" length="0" incomplete="0" nowinstats="0"
+        location="online">
+        <item name="Star Wars: Unlimited" objecttype="thing" objectid="387866">
+            <subtypes>
+                <subtype value="boardgame" />
+            </subtypes>
+        </item>
+        <comments>#BGGCatalog</comments>
+        <players>
+            <player username="fgarciaroman" userid="2147317" name="" startposition="" color=""
+                score="null" new="0" rating="0" win="0" />
+        </players>
+    </play>
+    <play id="83062716" date="2024-03-29" quantity="1" length="0" incomplete="0" nowinstats="0"
+        location="online">
+        <item name="Arkham Horror: The Card Game" objecttype="thing" objectid="205637">
+            <subtypes>
+                <subtype value="boardgame" />
+            </subtypes>
+        </item>
+        <comments>#BGGCatalog</comments>
+        <players>
+            <player username="fgarciaroman" userid="2147317" name="" startposition="" color=""
+                score="null" new="0" rating="0" win="0" />
+            <player username="" userid="0" name="Anonymous player" startposition="" color=""
+                score="null" new="0" rating="0" win="0" />
+            <player username="" userid="0" name="Anonymous player" startposition="" color=""
+                score="null" new="0" rating="0" win="0" />
+            <player username="" userid="0" name="Anonymous player" startposition="" color=""
+                score="null" new="0" rating="0" win="0" />
+        </players>
+    </play>
+    <play id="83062695" date="2024-03-28" quantity="1" length="0" incomplete="0" nowinstats="0"
+        location="online">
+        <item name="Earthborne Rangers" objecttype="thing" objectid="342900">
+            <subtypes>
+                <subtype value="boardgame" />
+            </subtypes>
+        </item>
+        <comments>#BGGCatalog</comments>
+        <players>
+            <player username="fgarciaroman" userid="2147317" name="" startposition="" color=""
+                score="null" new="0" rating="0" win="1" />
+            <player username="" userid="0" name="fran" startposition="" color="" score="null"
+                new="0" rating="0" win="1" />
+        </players>
+    </play>
+    <play id="83062658" date="2024-03-26" quantity="1" length="0" incomplete="0" nowinstats="0"
+        location="online">
+        <item name="Arkham Horror: The Card Game" objecttype="thing" objectid="205637">
+            <subtypes>
+                <subtype value="boardgame" />
+            </subtypes>
+        </item>
+        <comments>#BGGCatalog</comments>
+        <players>
+            <player username="fgarciaroman" userid="2147317" name="" startposition="" color=""
+                score="null" new="0" rating="0" win="1" />
+        </players>
+    </play>
+    <play id="83062668" date="2024-03-25" quantity="1" length="0" incomplete="0" nowinstats="0"
+        location="online">
+        <item name="Arkham Horror: The Card Game" objecttype="thing" objectid="205637">
+            <subtypes>
+                <subtype value="boardgame" />
+            </subtypes>
+        </item>
+        <comments>#BGGCatalog</comments>
+        <players>
+            <player username="fgarciaroman" userid="2147317" name="" startposition="" color=""
+                score="null" new="0" rating="0" win="0" />
+        </players>
+    </play>
+    <play id="82575426" date="2024-03-14" quantity="1" length="0" incomplete="0" nowinstats="0"
+        location="online">
+        <item name="Gloomhaven: Jaws of the Lion" objecttype="thing" objectid="291457">
+            <subtypes>
+                <subtype value="boardgame" />
+                <subtype value="boardgameintegration" />
+            </subtypes>
+        </item>
+        <comments>#BGGCatalog</comments>
+        <players>
+            <player username="fgarciaroman" userid="2147317" name="" startposition="" color=""
+                score="null" new="0" rating="0" win="1" />
+            <player username="" userid="0" name="Carlos urquiz" startposition="" color=""
+                score="null" new="0" rating="0" win="1" />
+            <player username="" userid="0" name="fran" startposition="" color="" score="null"
+                new="0" rating="0" win="1" />
+            <player username="" userid="0" name="javi" startposition="" color="" score="null"
+                new="0" rating="0" win="1" />
+        </players>
+    </play>
+    <play id="82399260" date="2024-03-07" quantity="1" length="0" incomplete="0" nowinstats="0"
+        location="online">
+        <item name="Earthborne Rangers" objecttype="thing" objectid="342900">
+            <subtypes>
+                <subtype value="boardgame" />
+            </subtypes>
+        </item>
+        <comments>#BGGCatalog</comments>
+        <players>
+            <player username="fgarciaroman" userid="2147317" name="" startposition="" color=""
+                score="null" new="0" rating="0" win="0" />
+            <player username="" userid="0" name="fran" startposition="" color="" score="null"
+                new="0" rating="0" win="0" />
+        </players>
+    </play>
+    <play id="82399206" date="2024-03-05" quantity="1" length="0" incomplete="0" nowinstats="0"
+        location="online">
+        <item name="Arkham Horror: The Card Game" objecttype="thing" objectid="205637">
+            <subtypes>
+                <subtype value="boardgame" />
+            </subtypes>
+        </item>
+        <comments>#BGGCatalog</comments>
+        <players>
+            <player username="fgarciaroman" userid="2147317" name="" startposition="" color=""
+                score="null" new="0" rating="0" win="0" />
+            <player username="" userid="0" name="Carlos urquiz" startposition="" color=""
+                score="null" new="0" rating="0" win="0" />
+            <player username="" userid="0" name="fran" startposition="" color="" score="null"
+                new="0" rating="0" win="0" />
+            <player username="" userid="0" name="javi" startposition="" color="" score="null"
+                new="0" rating="0" win="0" />
+        </players>
+    </play>
+    <play id="82192536" date="2024-03-02" quantity="1" length="0" incomplete="0" nowinstats="0"
+        location="casa">
+        <item name="Batman: Gotham City Chronicles" objecttype="thing" objectid="222514">
+            <subtypes>
+                <subtype value="boardgame" />
+                <subtype value="boardgameimplementation" />
+            </subtypes>
+        </item>
+        <comments>#BGGCatalog</comments>
+        <players>
+            <player username="fgarciaroman" userid="2147317" name="" startposition="" color=""
+                score="null" new="0" rating="0" win="0" />
+        </players>
+    </play>
+    <play id="82085786" date="2024-03-01" quantity="1" length="0" incomplete="0" nowinstats="0"
+        location="Sede">
+        <item name="Path of Light and Shadow" objecttype="thing" objectid="217398">
+            <subtypes>
+                <subtype value="boardgame" />
+            </subtypes>
+        </item>
+        <comments>#BGGCatalog</comments>
+        <players>
+            <player username="fgarciaroman" userid="2147317" name="" startposition="" color=""
+                score="null" new="0" rating="0" win="0" />
+            <player username="" userid="0" name="juanma" startposition="" color="" score="null"
+                new="0" rating="0" win="0" />
+            <player username="csibadajoz" userid="41868" name="raul" startposition="" color=""
+                score="null" new="0" rating="0" win="1" />
+            <player username="" userid="0" name="mikel" startposition="" color="" score="null"
+                new="0" rating="0" win="0" />
+        </players>
+    </play>
+    <play id="82023049" date="2024-02-29" quantity="1" length="0" incomplete="0" nowinstats="0"
+        location="casa">
+        <item name="Hellboy: The Board Game" objecttype="thing" objectid="243759">
+            <subtypes>
+                <subtype value="boardgame" />
+            </subtypes>
+        </item>
+        <comments>#BGGCatalog</comments>
+        <players>
+            <player username="fgarciaroman" userid="2147317" name="" startposition="" color=""
+                score="null" new="0" rating="0" win="0" />
+        </players>
+    </play>
+    <play id="81980537" date="2024-02-28" quantity="1" length="0" incomplete="0" nowinstats="0"
+        location="casa">
+        <item name="Hellboy: The Board Game" objecttype="thing" objectid="243759">
+            <subtypes>
+                <subtype value="boardgame" />
+            </subtypes>
+        </item>
+        <comments>#BGGCatalog</comments>
+        <players>
+            <player username="fgarciaroman" userid="2147317" name="" startposition="" color=""
+                score="null" new="0" rating="0" win="1" />
+        </players>
+    </play>
+    <play id="81980535" date="2024-02-27" quantity="1" length="0" incomplete="0" nowinstats="0"
+        location="online">
+        <item name="Arkham Horror: The Card Game" objecttype="thing" objectid="205637">
+            <subtypes>
+                <subtype value="boardgame" />
+            </subtypes>
+        </item>
+        <comments>#BGGCatalog</comments>
+        <players>
+            <player username="fgarciaroman" userid="2147317" name="" startposition="" color=""
+                score="null" new="0" rating="0" win="1" />
+            <player username="" userid="0" name="Carlos urquiz" startposition="" color=""
+                score="null" new="0" rating="0" win="1" />
+            <player username="" userid="0" name="fran" startposition="" color="" score="null"
+                new="0" rating="0" win="1" />
+            <player username="" userid="0" name="javi" startposition="" color="" score="null"
+                new="0" rating="0" win="1" />
+        </players>
+    </play>
+    <play id="81928623" date="2024-02-25" quantity="1" length="0" incomplete="0" nowinstats="0"
+        location="casa">
+        <item name="The Witcher: Old World" objecttype="thing" objectid="331106">
+            <subtypes>
+                <subtype value="boardgame" />
+            </subtypes>
+        </item>
+        <comments>#BGGCatalog</comments>
+        <players>
+            <player username="fgarciaroman" userid="2147317" name="" startposition="" color=""
+                score="null" new="0" rating="0" win="1" />
+            <player username="" userid="0" name="jose" startposition="" color="" score="null"
+                new="0" rating="0" win="0" />
+        </players>
+    </play>
+    <play id="81757968" date="2024-02-20" quantity="1" length="0" incomplete="0" nowinstats="0"
+        location="online">
+        <item name="Arkham Horror: The Card Game" objecttype="thing" objectid="205637">
+            <subtypes>
+                <subtype value="boardgame" />
+            </subtypes>
+        </item>
+        <comments>#BGGCatalog</comments>
+        <players>
+            <player username="fgarciaroman" userid="2147317" name="" startposition="" color=""
+                score="null" new="0" rating="0" win="1" />
+            <player username="" userid="0" name="Carlos urquiz" startposition="" color=""
+                score="null" new="0" rating="0" win="1" />
+            <player username="" userid="0" name="fran" startposition="" color="" score="null"
+                new="0" rating="0" win="1" />
+            <player username="" userid="0" name="javi" startposition="" color="" score="null"
+                new="0" rating="0" win="1" />
+        </players>
+    </play>
+    <play id="81597764" date="2024-02-17" quantity="1" length="0" incomplete="0" nowinstats="0"
+        location="casa">
+        <item name="Final Girl" objecttype="thing" objectid="277659">
+            <subtypes>
+                <subtype value="boardgame" />
+                <subtype value="boardgameimplementation" />
+            </subtypes>
+        </item>
+        <comments>#BGGCatalog</comments>
+        <players>
+            <player username="fgarciaroman" userid="2147317" name="" startposition="" color=""
+                score="null" new="0" rating="0" win="0" />
+        </players>
+    </play>
+    <play id="81447386" date="2024-02-15" quantity="1" length="0" incomplete="0" nowinstats="0"
+        location="online">
+        <item name="Arkham Horror: The Card Game" objecttype="thing" objectid="205637">
+            <subtypes>
+                <subtype value="boardgame" />
+            </subtypes>
+        </item>
+        <comments>#BGGCatalog</comments>
+        <players>
+            <player username="fgarciaroman" userid="2147317" name="" startposition="" color=""
+                score="null" new="0" rating="0" win="0" />
+            <player username="" userid="0" name="Carlos urquiz" startposition="" color=""
+                score="null" new="0" rating="0" win="0" />
+            <player username="" userid="0" name="fran" startposition="" color="" score="null"
+                new="0" rating="0" win="0" />
+            <player username="" userid="0" name="javi" startposition="" color="" score="null"
+                new="0" rating="0" win="0" />
+        </players>
+    </play>
+    <play id="81447368" date="2024-02-13" quantity="1" length="0" incomplete="0" nowinstats="0"
+        location="online">
+        <item name="Earthborne Rangers" objecttype="thing" objectid="342900">
+            <subtypes>
+                <subtype value="boardgame" />
+            </subtypes>
+        </item>
+        <comments>#BGGCatalog</comments>
+        <players>
+            <player username="fgarciaroman" userid="2147317" name="" startposition="" color=""
+                score="null" new="0" rating="0" win="0" />
+            <player username="" userid="0" name="fran" startposition="" color="" score="null"
+                new="0" rating="0" win="0" />
+        </players>
+    </play>
+    <play id="81408643" date="2024-02-13" quantity="1" length="0" incomplete="0" nowinstats="0"
+        location="casa">
+        <item name="Elder Sign" objecttype="thing" objectid="100423">
+            <subtypes>
+                <subtype value="boardgame" />
+            </subtypes>
+        </item>
+        <comments>#BGGCatalog</comments>
+        <players>
+            <player username="fgarciaroman" userid="2147317" name="" startposition="" color=""
+                score="null" new="0" rating="0" win="1" />
+        </players>
+    </play>
+    <play id="81337786" date="2024-02-11" quantity="1" length="0" incomplete="0" nowinstats="0"
+        location="Sede">
+        <item name="Dead of Winter: Tabletop Edition" objecttype="thing" objectid="176601">
+            <subtypes>
+                <subtype value="boardgame" />
+                <subtype value="boardgamecompilation" />
+            </subtypes>
+        </item>
+        <comments>#BGGCatalog</comments>
+        <players>
+            <player username="fgarciaroman" userid="2147317" name="" startposition="" color=""
+                score="null" new="0" rating="0" win="0" />
+            <player username="corion" userid="1604925" name="Juan carlos" startposition="" color=""
+                score="null" new="0" rating="0" win="0" />
+            <player username="" userid="0" name="Anonymous player" startposition="" color=""
+                score="null" new="0" rating="0" win="0" />
+            <player username="" userid="0" name="juanma" startposition="" color="" score="null"
+                new="0" rating="0" win="0" />
+        </players>
+    </play>
+    <play id="81337677" date="2024-02-08" quantity="1" length="0" incomplete="0" nowinstats="0"
+        location="online">
+        <item name="Gloomhaven: Jaws of the Lion" objecttype="thing" objectid="291457">
+            <subtypes>
+                <subtype value="boardgame" />
+                <subtype value="boardgameintegration" />
+            </subtypes>
+        </item>
+        <comments>#BGGCatalog</comments>
+        <players>
+            <player username="fgarciaroman" userid="2147317" name="" startposition="" color=""
+                score="null" new="0" rating="0" win="0" />
+            <player username="" userid="0" name="Carlos urquiz" startposition="" color=""
+                score="null" new="0" rating="0" win="0" />
+            <player username="" userid="0" name="fran" startposition="" color="" score="null"
+                new="0" rating="0" win="0" />
+            <player username="" userid="0" name="javi" startposition="" color="" score="null"
+                new="0" rating="0" win="0" />
+        </players>
+    </play>
+    <play id="81337638" date="2024-02-07" quantity="1" length="0" incomplete="0" nowinstats="0"
+        location="online">
+        <item name="Earthborne Rangers" objecttype="thing" objectid="342900">
+            <subtypes>
+                <subtype value="boardgame" />
+            </subtypes>
+        </item>
+        <comments>#BGGCatalog</comments>
+        <players>
+            <player username="fgarciaroman" userid="2147317" name="" startposition="" color=""
+                score="null" new="0" rating="0" win="0" />
+            <player username="" userid="0" name="fran" startposition="" color="" score="null"
+                new="0" rating="0" win="0" />
+        </players>
+    </play>
+    <play id="81337613" date="2024-02-06" quantity="1" length="0" incomplete="0" nowinstats="0"
+        location="online">
+        <item name="Arkham Horror: The Card Game" objecttype="thing" objectid="205637">
+            <subtypes>
+                <subtype value="boardgame" />
+            </subtypes>
+        </item>
+        <comments>#BGGCatalog</comments>
+        <players>
+            <player username="fgarciaroman" userid="2147317" name="" startposition="" color=""
+                score="null" new="0" rating="0" win="1" />
+            <player username="" userid="0" name="Carlos urquiz" startposition="" color=""
+                score="null" new="0" rating="0" win="1" />
+            <player username="" userid="0" name="fran" startposition="" color="" score="null"
+                new="0" rating="0" win="1" />
+            <player username="" userid="0" name="javi" startposition="" color="" score="null"
+                new="0" rating="0" win="1" />
+        </players>
+    </play>
+    <play id="80983394" date="2024-02-02" quantity="1" length="0" incomplete="0" nowinstats="0"
+        location="casa">
+        <item name="Final Girl" objecttype="thing" objectid="277659">
+            <subtypes>
+                <subtype value="boardgame" />
+                <subtype value="boardgameimplementation" />
+            </subtypes>
+        </item>
+        <comments>#BGGCatalog</comments>
+        <players>
+            <player username="fgarciaroman" userid="2147317" name="" startposition="" color=""
+                score="null" new="0" rating="0" win="0" />
+        </players>
+    </play>
+    <play id="80983425" date="2024-02-02" quantity="1" length="0" incomplete="0" nowinstats="0"
+        location="Sede">
+        <item name="Star Wars: Outer Rim" objecttype="thing" objectid="271896">
+            <subtypes>
+                <subtype value="boardgame" />
+            </subtypes>
+        </item>
+        <comments>#BGGCatalog</comments>
+        <players>
+            <player username="fgarciaroman" userid="2147317" name="" startposition="" color=""
+                score="null" new="0" rating="0" win="1" />
+            <player username="" userid="0" name="juanma" startposition="" color="" score="null"
+                new="0" rating="0" win="0" />
+            <player username="csibadajoz" userid="41868" name="raul" startposition="" color=""
+                score="null" new="0" rating="0" win="0" />
+            <player username="" userid="0" name="sergio" startposition="" color="" score="null"
+                new="0" rating="0" win="0" />
+        </players>
+    </play>
+    <play id="80983372" date="2024-01-31" quantity="1" length="0" incomplete="0" nowinstats="0"
+        location="online">
+        <item name="Earthborne Rangers" objecttype="thing" objectid="342900">
+            <subtypes>
+                <subtype value="boardgame" />
+            </subtypes>
+        </item>
+        <comments>#BGGCatalog</comments>
+        <players>
+            <player username="fgarciaroman" userid="2147317" name="" startposition="" color=""
+                score="null" new="0" rating="0" win="0" />
+            <player username="" userid="0" name="fran" startposition="" color="" score="null"
+                new="0" rating="0" win="0" />
+        </players>
+    </play>
+    <play id="80983350" date="2024-01-30" quantity="1" length="0" incomplete="0" nowinstats="0"
+        location="online">
+        <item name="Arkham Horror: The Card Game" objecttype="thing" objectid="205637">
+            <subtypes>
+                <subtype value="boardgame" />
+            </subtypes>
+        </item>
+        <comments>#BGGCatalog</comments>
+        <players>
+            <player username="fgarciaroman" userid="2147317" name="" startposition="" color=""
+                score="null" new="0" rating="0" win="1" />
+            <player username="" userid="0" name="Carlos urquiz" startposition="" color=""
+                score="null" new="0" rating="0" win="1" />
+            <player username="" userid="0" name="fran" startposition="" color="" score="null"
+                new="0" rating="0" win="0" />
+            <player username="" userid="0" name="javi" startposition="" color="" score="null"
+                new="0" rating="0" win="1" />
+        </players>
+    </play>
+    <play id="80787653" date="2024-01-28" quantity="1" length="0" incomplete="0" nowinstats="0"
+        location="casa">
+        <item name="Final Girl" objecttype="thing" objectid="277659">
+            <subtypes>
+                <subtype value="boardgame" />
+                <subtype value="boardgameimplementation" />
+            </subtypes>
+        </item>
+        <comments>#BGGCatalog</comments>
+        <players>
+            <player username="fgarciaroman" userid="2147317" name="" startposition="" color=""
+                score="null" new="0" rating="0" win="1" />
+        </players>
+    </play>
+    <play id="80708940" date="2024-01-25" quantity="1" length="0" incomplete="0" nowinstats="0"
+        location="online">
+        <item name="Gloomhaven: Jaws of the Lion" objecttype="thing" objectid="291457">
+            <subtypes>
+                <subtype value="boardgame" />
+                <subtype value="boardgameintegration" />
+            </subtypes>
+        </item>
+        <comments>#BGGCatalog</comments>
+        <players>
+            <player username="fgarciaroman" userid="2147317" name="" startposition="" color=""
+                score="null" new="0" rating="0" win="1" />
+            <player username="" userid="0" name="Carlos urquiz" startposition="" color=""
+                score="null" new="0" rating="0" win="1" />
+            <player username="" userid="0" name="fran" startposition="" color="" score="null"
+                new="0" rating="0" win="1" />
+            <player username="" userid="0" name="javi" startposition="" color="" score="null"
+                new="0" rating="0" win="1" />
+        </players>
+    </play>
+    <play id="80623095" date="2024-01-24" quantity="1" length="0" incomplete="0" nowinstats="0"
+        location="online">
+        <item name="Earthborne Rangers" objecttype="thing" objectid="342900">
+            <subtypes>
+                <subtype value="boardgame" />
+            </subtypes>
+        </item>
+        <comments>#BGGCatalog</comments>
+        <players>
+            <player username="fgarciaroman" userid="2147317" name="" startposition="" color=""
+                score="null" new="0" rating="0" win="1" />
+            <player username="" userid="0" name="fran" startposition="" color="" score="null"
+                new="0" rating="0" win="1" />
+        </players>
+    </play>
+    <play id="80601449" date="2024-01-23" quantity="1" length="0" incomplete="0" nowinstats="0"
+        location="online">
+        <item name="Arkham Horror: The Card Game" objecttype="thing" objectid="205637">
+            <subtypes>
+                <subtype value="boardgame" />
+            </subtypes>
+        </item>
+        <comments>#BGGCatalog</comments>
+        <players>
+            <player username="" userid="0" name="Anonymous player" startposition="" color=""
+                score="null" new="0" rating="0" win="1" />
+            <player username="" userid="0" name="Anonymous player" startposition="" color=""
+                score="null" new="0" rating="0" win="1" />
+            <player username="" userid="0" name="fran" startposition="" color="" score="null"
+                new="0" rating="0" win="1" />
+        </players>
+    </play>
+    <play id="80422075" date="2024-01-19" quantity="1" length="0" incomplete="0" nowinstats="0"
+        location="Sede">
+        <item name="Gloomhaven: Jaws of the Lion" objecttype="thing" objectid="291457">
+            <subtypes>
+                <subtype value="boardgame" />
+                <subtype value="boardgameintegration" />
+            </subtypes>
+        </item>
+        <comments>#BGGCatalog</comments>
+        <players>
+            <player username="fgarciaroman" userid="2147317" name="" startposition="" color=""
+                score="null" new="0" rating="0" win="0" />
+            <player username="" userid="0" name="Juan carlos" startposition="" color="" score="null"
+                new="0" rating="0" win="0" />
+            <player username="" userid="0" name="juanma" startposition="" color="" score="null"
+                new="0" rating="0" win="0" />
+            <player username="" userid="0" name="raul" startposition="" color="" score="null"
+                new="0" rating="0" win="0" />
+        </players>
+    </play>
+    <play id="80377809" date="2024-01-18" quantity="1" length="0" incomplete="0" nowinstats="1"
+        location="online">
+        <item name="Arkham Horror: The Card Game" objecttype="thing" objectid="205637">
+            <subtypes>
+                <subtype value="boardgame" />
+            </subtypes>
+        </item>
+        <comments>#BGGCatalog</comments>
+        <players>
+            <player username="fgarciaroman" userid="2147317" name="" startposition="" color=""
+                score="null" new="0" rating="0" win="1" />
+            <player username="" userid="0" name="Anonymous player" startposition="" color=""
+                score="null" new="0" rating="0" win="1" />
+            <player username="" userid="0" name="Anonymous player" startposition="" color=""
+                score="null" new="0" rating="0" win="1" />
+            <player username="" userid="0" name="fran" startposition="" color="" score="null"
+                new="0" rating="0" win="1" />
+        </players>
+    </play>
+    <play id="80351085" date="2024-01-17" quantity="1" length="0" incomplete="0" nowinstats="0"
+        location="online">
+        <item name="Earthborne Rangers" objecttype="thing" objectid="342900">
+            <subtypes>
+                <subtype value="boardgame" />
+            </subtypes>
+        </item>
+        <comments>#BGGCatalog</comments>
+        <players>
+            <player username="fgarciaroman" userid="2147317" name="" startposition="" color=""
+                score="null" new="0" rating="0" win="0" />
+            <player username="" userid="0" name="fran" startposition="" color="" score="null"
+                new="0" rating="0" win="0" />
+        </players>
+    </play>
+    <play id="80351071" date="2024-01-16" quantity="1" length="0" incomplete="0" nowinstats="0"
+        location="online">
+        <item name="Arkham Horror: The Card Game" objecttype="thing" objectid="205637">
+            <subtypes>
+                <subtype value="boardgame" />
+            </subtypes>
+        </item>
+        <comments>#BGGCatalog</comments>
+        <players>
+            <player username="fgarciaroman" userid="2147317" name="" startposition="" color=""
+                score="null" new="0" rating="0" win="1" />
+            <player username="" userid="0" name="Anonymous player" startposition="" color=""
+                score="null" new="0" rating="0" win="1" />
+            <player username="" userid="0" name="Anonymous player" startposition="" color=""
+                score="null" new="0" rating="0" win="1" />
+            <player username="" userid="0" name="Anonymous player" startposition="" color=""
+                score="null" new="0" rating="0" win="1" />
+        </players>
+    </play>
+    <play id="80256824" date="2024-01-15" quantity="1" length="0" incomplete="0" nowinstats="0"
+        location="casa">
+        <item name="Final Girl" objecttype="thing" objectid="277659">
+            <subtypes>
+                <subtype value="boardgame" />
+                <subtype value="boardgameimplementation" />
+            </subtypes>
+        </item>
+        <comments>#BGGCatalog</comments>
+        <players>
+            <player username="fgarciaroman" userid="2147317" name="" startposition="" color=""
+                score="null" new="0" rating="0" win="0" />
+        </players>
+    </play>
+    <play id="80152660" date="2024-01-14" quantity="1" length="60" incomplete="0" nowinstats="0"
+        location="casa">
+        <item name="Final Girl" objecttype="thing" objectid="277659">
+            <subtypes>
+                <subtype value="boardgame" />
+                <subtype value="boardgameimplementation" />
+            </subtypes>
+        </item>
+        <comments>#BGGCatalog</comments>
+        <players>
+            <player username="fgarciaroman" userid="2147317" name="" startposition="" color=""
+                score="null" new="0" rating="0" win="0" />
+        </players>
+    </play>
+    <play id="80152600" date="2024-01-13" quantity="1" length="0" incomplete="0" nowinstats="0"
+        location="">
+        <item name="Sword & Sorcery" objecttype="thing" objectid="170771">
+            <subtypes>
+                <subtype value="boardgame" />
+                <subtype value="boardgameintegration" />
+            </subtypes>
+        </item>
+        <comments>#BGGCatalog</comments>
+        <players>
+            <player username="fgarciaroman" userid="2147317" name="" startposition="" color=""
+                score="null" new="0" rating="0" win="1" />
+        </players>
+    </play>
+</plays>

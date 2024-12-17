@@ -6,10 +6,10 @@ export const BGG = {
     fetchAPI: async (entity, params) => {
         const queryString = new URLSearchParams(params).toString();
         let url = `${BGG.BASE_ENDPOINT}${entity}?${queryString}`
-        if(showLogs) console.log(url)
+        //if(showLogs) console.log(url)
         const response = await fetch(url);
         let responseBody = await response.text()
-        if(showLogs) console.log(responseBody.split("\n")[0])
+        //if(showLogs) console.log(responseBody.split("\n")[0])
         return BGG.xml2js(responseBody.replaceAll("&", "and"))
     },
     fetchPlays: async (username, since) => {
@@ -66,14 +66,21 @@ export const BGG = {
     },
     xml2js: (xml) => xml2json.xml2js(xml, { compact: true, spaces: 4 }),
     parseBggPlays: playsBggJs => {
-        console.log(playsBggJs)
-        if(typeof playsBggJs.plays == "object"){
+        //console.log("parseBggPlays", playsBggJs)
+        console.log("parseBggPlays", playsBggJs)
+        if(!Array.isArray(playsBggJs.plays.play)){
             playsBggJs.plays.play = [playsBggJs.plays.play]
         }
-        console.log(playsBggJs)
+        console.log("parseBggPlays", playsBggJs)
+        //console.log(playsBggJs.plays.play[0])
         return playsBggJs.plays.play.map(BGG.parseBggPlay)
     },
-    parseBggPlay: play => ({
+    parseBggPlay: play => {
+        if(!play || !play._attributes || !play._attributes.id){
+            console.log("parseBggPlay", play, !play , !play._attributes , !play._attributes?.id)
+        }
+        return {
+
         id: play["_attributes"].id,
         date: play["_attributes"].date,
         quantity: play["_attributes"].quantity,
@@ -84,7 +91,7 @@ export const BGG = {
         item: BGG.parseBggItem(play.item),
         // play.players puede ser undefined o un array o un objeto
         players: Array.isArray(play.players?.player) ? play.players.player.map(BGG.parseBggPlayer) : play.players?.player ? [BGG.parseBggPlayer(play.players.player)] : []
-    }),
+    }},
     parseBggItem: item => ({
         id: item["_attributes"].objectid,
         name: item["_attributes"].name

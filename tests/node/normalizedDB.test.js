@@ -106,7 +106,7 @@ describe('normalizeDB', () => {
 
             let data = await db.normalizeData(rawDB)
             let jugadores = await db.getJugadores()
-            console.log(jugadores)
+            // console.log(jugadores)
             let juegos = await db.getJuegos()
 
             expect(rawDB.getPlays).toHaveBeenCalled();
@@ -123,13 +123,14 @@ describe('normalizeDB', () => {
             expect(data[0].reportador).toBe('raultm')
             expect(data[0].localizaciones).toEqual([ 'Almendralejo Normalizado', 'Badajoz Normalizado' ])
             expect(data[0].juego).toEqual("352515")
+            // usuarios anonimos traducidos a ''
             expect(data[0].jugadores).toEqual([
-                'raultm_anonymous_player',
-                'raultm_anonymous_player',
-                'raultm_rtm',
-                'raultm_anonymous_player',
-                'raultm_anonymous_player',
-                'raultm_anonymous_player'
+                '',
+                '',
+                '',
+                '',
+                '',
+                ''
               ])
         })
 
