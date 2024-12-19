@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Colección de Partidas</title>
     <link rel="stylesheet" href="v0.css">
+    <link href="https://unpkg.com/gridjs/dist/theme/mermaid.min.css" rel="stylesheet"/>
 </head>
 
 <body>
@@ -13,7 +14,7 @@
         <h1>Esportón Ludico</h1>
         <div class="tabs">
             <button class="tab-button active" data-tab="tops">Tops</button>
-            <!-- <button class="tab-button" data-tab="explorar">Explorar partidas</button> -->
+            <button class="tab-button" data-tab="explorar">Explorar partidas</button>
             <!-- <button class="tab-button" data-tab="curiosos">Datos curiosos</button> -->
             <!-- <button class="tab-button" data-tab="ludoteca">Ludoteca</button> -->
         </div>
@@ -50,7 +51,7 @@
 
         </div>
         <div id="explorar" class="tab-pane">
-            <div id="games" style="display: none;">
+            <div id="games" >
                 <div id="wrapper"></div>
             </div>
         </div>
@@ -64,6 +65,7 @@
         </div>
     </div>
     </div>
+    <script src="https://unpkg.com/gridjs/dist/gridjs.umd.js"></script>
     <script src="web/sql.js"></script>
     <script src="v0.js"></script>
 </body>

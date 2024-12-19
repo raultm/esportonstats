@@ -135,6 +135,7 @@ async function updateDashBoardData(startDate, endDate) {
         endDate.toISOString().split('T')[0]
     )
     console.log(data)
+    pintarTabla(data.tabla)
     const lastThreeMonthsGamesInfluence = document.getElementById("last-three-months-games-influence")
     const lastThreeMonthsGamesPlayed = document.getElementById("last-three-months-games-played")
     const lastThreeMonthsUsers = document.getElementById("last-three-months-users")
@@ -185,13 +186,25 @@ function top5(entitesCount) {
         .slice(0, 5)
 }
 
+function parsePlayForTable(record, juegos, jugadores) {
+    //console.log("recordfortable", record, juegos, jugadores, juegos[record[3]][1])
+    return {
+        id: record[0],
+        date: record[1],
+        reporter: record[2],
+        game: juegos[record[3]][1],
+        players: parsePlayers(JSON.parse(record[4])).map(playerObj => jugadores[playerObj.name][1]),
+        locations: JSON.parse(record[5]),
+    }
+}
+
 function parsePlay(recorder, record, juegos, jugadores) {
     //console.log("record", record, juegos, jugadores, juegos[record[3]][1])
     return {
         id: record[0],
         date: record[1],
         reporter: record[2],
-        game: juegos[record[3]][2],
+        game: juegos[record[3]][1],
         players: parsePlayers(JSON.parse(record[4])),
         locations: JSON.parse(record[5]),
     }
@@ -244,7 +257,7 @@ async function fetchDashboardData(startDate, endDate) {
     }
     //console.log(partidasUltimos3Meses)
     return {
-        tabla: partidas.map(partidaBGG => parsePlay("", partidaBGG, juegos, jugadores)),
+        tabla: partidas.map(partidaBGG => parsePlayForTable(partidaBGG, juegos, jugadores)),
         range: {
             games: {
                 influence: top5(partidasRangoTiempo.reduce(reduceJuegosPorInfluencia(juegos), {})),
@@ -376,4 +389,28 @@ function arrayToObject(arrayToMap) {
         acc[item[0]] = item;
         return acc;
     }, {})
+}
+
+function pintarTabla(data) {
+    // console.log("pintarTabla", data)
+    // return
+    data = data.sort((a, b) => b.date.localeCompare(a.date));
+    new gridjs.Grid({
+        columns: [
+            { id: 'id', width: "120px", name: 'ID' },
+            { id: 'date', width: "140px", name: 'Fecha' },
+            { id: 'reporter', name: 'Registrada por' },
+            { id: 'game', name: 'Juego' },
+            { id: 'locations', name: 'Lugar', data: (row) => row.locations.join(", ") },
+            { id: 'players', name: 'Jugadores', data: (row) => row.players.join(", ") }
+        ],
+        fixedHeader: true,
+        pagination: true,
+        search: true,
+        sort: true,
+        events: {
+            "gridjs:init": (grid) => { grid.sort(0, "desc") }
+        },
+        data: data,
+        }).render(document.getElementById("wrapper"));
 }
