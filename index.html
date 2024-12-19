@@ -1,11 +1,13 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Colección de Partidas</title>
     <link rel="stylesheet" href="v0.css">
 </head>
+
 <body>
     <div class="container">
         <h1>Esportón Ludico</h1>
@@ -17,52 +19,53 @@
         </div>
         <div class="tab-content">
             <div id="tops" class="tab-pane active">
+                <div class="filters">
+                    <div class="quick-filters">
+                        <button data-range="week">Última semana</button>
+                        <button data-range="month">Último mes</button>
+                        <button id="3months" data-range="3months">Últimos 3 meses</button>
+                        <button data-range="6months">Últimos 6 meses</button>
+                        <button data-range="year">Durante el año</button>
+                    </div>
+                    <label for="start-date">Fecha inicio:</label>
+                    <input type="date" id="start-date">
+                    <label for="end-date">Fecha fin:</label>
+                    <input type="date" id="end-date">
+
+
+                </div>
                 <div id="leaders" style="display: block;">
                     <section class="dashboard-section">
-                        <h2>Últimos tres meses</h2>
                         <h3>Juegos más representativos (partidas * peso)</h3>
-                            <ul id="last-three-months-games-influence" class="top5-list"></ul>    
+                        <ul id="last-three-months-games-influence" class="top5-list"></ul>
                         <h3>Juegos con más partidas</h3>
-                            <ul id="last-three-months-games-played" class="top5-list"></ul>
-                                <h3>Usuarios más activos</h3>
-                                <ul id="last-three-months-users" class="top5-list"></ul>
-                                <h3>Lugares habituales</h3>
-                                <ul id="last-three-months-locations" class="top5-list"></ul>
-                        </div>
-                    </section>
-        
-                    <section class="dashboard-section">
-                        <h2>Durante el año 2024</h2>
-                        <h3>Juegos más representativos (partidas * peso)</h3>
-                                <ul id="year-games-influence" class="top5-list"></ul>        
-                        <h3>Juegos con más partidas</h3>
-                                <ul id="year-games-played" class="top5-list"></ul>
-                                <h3>Usuarios más activos</h3>
-                                <ul id="year-users" class="top5-list"></ul>
-                                <h3>Lugares habituales</h3>
-                                <ul id="year-locations" class="top5-list"></ul>
-                        </div>
-                    </section>
+                        <ul id="last-three-months-games-played" class="top5-list"></ul>
+                        <h3>Usuarios más activos</h3>
+                        <ul id="last-three-months-users" class="top5-list"></ul>
+                        <h3>Lugares habituales</h3>
+                        <ul id="last-three-months-locations" class="top5-list"></ul>
                 </div>
-                
+                </section>
             </div>
-            <div id="explorar" class="tab-pane">
-                <div id="games" style="display: none;">
-                    <div id="wrapper"></div>
-                </div>
-            </div>
-            <div id="curiosos" class="tab-pane">
-                <h2>Datos curiosos</h2>
-                <p>Comparte estadísticas interesantes y hechos divertidos sobre tus partidas y juegos.</p>
-            </div>
-            <div id="ludoteca" class="tab-pane">
-                <h2>Ludoteca</h2>
-                <p>Muestra un catálogo completo de todos los juegos en tu colección.</p>
+
+        </div>
+        <div id="explorar" class="tab-pane">
+            <div id="games" style="display: none;">
+                <div id="wrapper"></div>
             </div>
         </div>
+        <div id="curiosos" class="tab-pane">
+            <h2>Datos curiosos</h2>
+            <p>Comparte estadísticas interesantes y hechos divertidos sobre tus partidas y juegos.</p>
+        </div>
+        <div id="ludoteca" class="tab-pane">
+            <h2>Ludoteca</h2>
+            <p>Muestra un catálogo completo de todos los juegos en tu colección.</p>
+        </div>
+    </div>
     </div>
     <script src="web/sql.js"></script>
     <script src="v0.js"></script>
 </body>
-</html>
 
+</html>

@@ -67,17 +67,17 @@ export const BGG = {
     xml2js: (xml) => xml2json.xml2js(xml, { compact: true, spaces: 4 }),
     parseBggPlays: playsBggJs => {
         //console.log("parseBggPlays", playsBggJs)
-        console.log("parseBggPlays", playsBggJs)
+        //console.log("parseBggPlays", playsBggJs)
         if(!Array.isArray(playsBggJs.plays.play)){
             playsBggJs.plays.play = [playsBggJs.plays.play]
         }
-        console.log("parseBggPlays", playsBggJs)
+        //console.log("parseBggPlays", playsBggJs)
         //console.log(playsBggJs.plays.play[0])
         return playsBggJs.plays.play.map(BGG.parseBggPlay)
     },
     parseBggPlay: play => {
         if(!play || !play._attributes || !play._attributes.id){
-            console.log("parseBggPlay", play, !play , !play._attributes , !play._attributes?.id)
+            //console.log("parseBggPlay", play, !play , !play._attributes , !play._attributes?.id)
         }
         return {
 
