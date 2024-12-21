@@ -7,7 +7,7 @@ export const normalizedDBBuilder = (config) => ({
     path: config?.path ?? "/data/esporton.test.sqlite",
     db: null,
     normalizeData: async function (rawDB) {
-        let plays = await rawDB.getPlays()
+        let plays = await rawDB.getPlaysWithoutDuplicates()
         let playersArray = await rawDB.getPlayers()
         let gamesArray = await rawDB.getGames()
         let players = this.arrayToObject(playersArray)

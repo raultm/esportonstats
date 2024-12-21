@@ -42,6 +42,9 @@ export const rawDBBuilder = (config) => ({
     getPlays: async function () {
         return await this.all(`SELECT * FROM plays`);
     },
+    getPlaysWithoutDuplicates: async function () {
+        return await this.all(`SELECT * FROM plays WHERE duplicate IS NULL`);
+    },
     saveGames: async function (games) {
         await Promise.all(
             games.map((game) => this.saveGame(game))
@@ -172,6 +175,7 @@ export const rawDBBuilder = (config) => ({
                 date TEXT,
                 reporter TEXT,
                 game TEXT,
+                duplicate TEXT,
                 json TEXT)`);
             db.run(`CREATE TABLE IF NOT EXISTS players (
                 id TEXT PRIMARY KEY,
