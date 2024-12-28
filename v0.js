@@ -3,7 +3,7 @@ document.addEventListener('DOMContentLoaded', function () {
     const tabPanes = document.querySelectorAll('.tab-pane');
 
     setupDatePickers()
-    
+
 
     function showTab(tabId) {
         tabPanes.forEach(pane => {
@@ -33,7 +33,7 @@ document.addEventListener('DOMContentLoaded', function () {
 function setupDatePickers() {
     const startDateInput = document.getElementById('start-date');
     const endDateInput = document.getElementById('end-date');
-    
+
 
     // Quick filter buttons
     const quickFilters = document.querySelectorAll('.quick-filters button');
@@ -61,7 +61,7 @@ function setupDatePickers() {
                     startDate.setMonth(today.getMonth() - 6);
                     break;
                 case 'year':
-                    startDate = new Date(today.getFullYear(), 0, 1);
+                    startDate = new Date(today.getFullYear(), 0, 2);
                     break;
             }
 
@@ -72,13 +72,10 @@ function setupDatePickers() {
             updateData(startDate, endDate);
         });
     });
-    
-    // Update data function
+
     function updateData(startDate, endDate) {
         console.log('Fetching data from', startDate, 'to', endDate);
         updateDashBoardData(startDate, endDate)
-        // Aquí llamarías a tu lógica para popular los datos
-        // fetchData(startDate, endDate);
     }
 
     // Listeners para cambios manuales en las fechas
@@ -104,28 +101,6 @@ xhr.onload = async e => {
     db = new SQL.Database(new Uint8Array(xhr.response))
     const last3MonthsButtons = document.getElementById('3months');
     last3MonthsButtons.click()
-    // const lastThreeMonthsGamesInfluence = document.getElementById("last-three-months-games-influence")
-    // const lastThreeMonthsGamesPlayed = document.getElementById("last-three-months-games-played")
-    // const lastThreeMonthsUsers = document.getElementById("last-three-months-users")
-    // const lastThreeMonthsLocations = document.getElementById("last-three-months-locations")
-    // const yearGamesInfluence = document.getElementById("year-games-influence");
-    // const yearGamesPlayed = document.getElementById("year-games-played");
-    // const yearUsers = document.getElementById("year-users");
-    // const yearLocations = document.getElementById("year-locations");
-
-    // const data = await fetchDashboardData();
-    // console.log(data)
-    // renderList(lastThreeMonthsGamesInfluence, data.lastThreeMonths.games.influence)
-    // renderList(lastThreeMonthsGamesPlayed, data.lastThreeMonths.games.played)
-    // renderList(lastThreeMonthsUsers, data.lastThreeMonths.users, "cambiarImagenJugador")
-    // renderList(lastThreeMonthsLocations, data.lastThreeMonths.locations, "cambiarImagenLugar")
-    // renderList(yearGamesInfluence, data.year.games.influence)
-    // renderList(yearGamesPlayed, data.year.games.played)
-    // renderList(yearUsers, data.year.users, "cambiarImagenJugador")
-    // renderList(yearLocations, data.year.locations, "cambiarImagenLugar")
-
-    // const dataExplorer = data.tabla; //await fetchExplorerData();
-    // pintarTabla(dataExplorer)
 }
 xhr.send();
 
@@ -136,22 +111,25 @@ async function updateDashBoardData(startDate, endDate) {
     )
     console.log(data)
     pintarTabla(data.tabla)
-    const lastThreeMonthsGamesInfluence = document.getElementById("last-three-months-games-influence")
-    const lastThreeMonthsGamesPlayed = document.getElementById("last-three-months-games-played")
-    const lastThreeMonthsUsers = document.getElementById("last-three-months-users")
-    const lastThreeMonthsLocations = document.getElementById("last-three-months-locations")
-    renderList(lastThreeMonthsGamesInfluence, data.range.games.influence)
-    renderList(lastThreeMonthsGamesPlayed, data.range.games.played)
-    renderList(lastThreeMonthsUsers, data.range.users, "cambiarImagenJugador")
-    renderList(lastThreeMonthsLocations, data.range.locations, "cambiarImagenLugar")
+    const gamesByInfluence = document.getElementById("games-influence")
+    const gamesByPlays = document.getElementById("games-played")
+    const playersByPlays = document.getElementById("users")
+    const locationsByPlays = document.getElementById("locations")
+    renderList(gamesByInfluence, data.range.games.influence)
+    renderList(gamesByPlays, data.range.games.played)
+    renderList(playersByPlays, data.range.users, "cambiarImagenJugador")
+    renderList(locationsByPlays, data.range.locations, "cambiarImagenLugar")
 }
 
 function renderList(element, data, fallbackImages = "cambiarImagenJuego") {
     console.log("renderList", element, data)
     if (!data) { return 'No Data' }
     element.innerHTML = data
-        .map(item => `<li class="top-item"><img id="imagen-principal" src="${item.image}" alt="${item.name}" onerror="${fallbackImages}(this)" />
-<br /><div class="info">${item.name} (<span>${item.total}</span>)</div></li>`)
+        .map(item => {
+            let liItem = `<li class="top-item"><img id="imagen-principal" src="${item.image}" alt="${item.name}" onerror="${fallbackImages}(this)" />
+<br /><div class="info">${item.url??item.name} (<span>${item.total}</span>)</div></li>`
+            return liItem
+        })
         .join("");
 }
 
@@ -166,22 +144,10 @@ function timed(fn, msg = "") {
     console.timeEnd("exec: " + msg)
     return result
 }
-function threeMonthsAgo() {
-    // Fecha actual
-    const fechaActual = new Date();
-
-    // Restar tres meses
-    const tresMesesAtras = new Date(fechaActual);
-    tresMesesAtras.setMonth(fechaActual.getMonth() - 3);
-
-    // Convertir a cadena en formato "YYYY-MM-DD"
-    return tresMesesAtras.toISOString().split('T')[0];
-}
-
 function top5(entitesCount) {
     // console.log("entitiesCount", entitesCount)
     return Object.entries(entitesCount)
-        .map(([id, { total, name, image }]) => ({ name, total, image }))
+        .map(([id, { total, name, image, url }]) => ({ name, total, image, url }))
         .sort((a, b) => b.total - a.total)
         .slice(0, 5)
 }
@@ -250,7 +216,6 @@ async function fetchDashboardData(startDate, endDate) {
     ]
 
     //console.log(partidas[0])
-    let partidasUltimos3Meses = partidas.filter((partida) => partida[1] > threeMonthsAgo())
     let partidasRangoTiempo = []
     if (startDate && endDate) {
         partidasRangoTiempo = partidas.filter((partida) => partida[1] >= startDate && partida[1] <= endDate)
@@ -266,24 +231,6 @@ async function fetchDashboardData(startDate, endDate) {
             users: top5(partidasRangoTiempo.map(partidaBGG => parsePlay("", partidaBGG, juegos, jugadores)).reduce(reduceJugadores(jugadores), {})),
             locations: top5(partidasRangoTiempo.map(partidaBGG => parsePlay(partidaBGG[1], partidaBGG, juegos, jugadores)).reduce(reduceLocations(), {}))
         },
-        lastThreeMonths: {
-            games: {
-                influence: top5(partidasUltimos3Meses.reduce(reduceJuegosPorInfluencia(juegos), {})),
-                played: top5(partidasUltimos3Meses.reduce(reduceJuegos(juegos), {})),
-            },
-            users: top5(partidasUltimos3Meses.map(partidaBGG => parsePlay("", partidaBGG, juegos, jugadores)).reduce(reduceJugadores(jugadores), {})),
-            locations: top5(partidasUltimos3Meses.map(partidaBGG => parsePlay(partidaBGG[1], partidaBGG, juegos, jugadores)).reduce(reduceLocations(), {}))
-
-        },
-        year: {
-            games: {
-                influence: top5(partidas.reduce(reduceJuegosPorInfluencia(juegos), {})),
-                played: top5(partidas.reduce(reduceJuegos(juegos), {}), {}),
-            },
-            users: top5(partidas.map(partidaBGG => parsePlay("", partidaBGG, juegos, jugadores)).reduce(reduceJugadores(jugadores), {})),
-            locations: top5(partidas.map(partidaBGG => parsePlay(partidaBGG[1], partidaBGG, juegos, jugadores)).reduce(reduceLocations(), {}))
-
-        },
     };
 
 
@@ -293,7 +240,12 @@ function reduceJuegos(juegos) {
 
     return (acc, partida) => {
         if (!acc[partida[3]]) {
-            acc[partida[3]] = { total: 0, name: juegos[partida[3]][1], image: juegos[partida[3]][3] }
+            acc[partida[3]] = { 
+                total: 0, 
+                name: juegos[partida[3]][1], 
+                image: juegos[partida[3]][3],
+                url: juegos[partida[3]][1] + " - <a target='_blank' href='https://boardgamegeek.com/boardgame/" + partida[3] + "'>BGG</a>"
+            }
         }
         acc[partida[3]].total += + 1;
         return acc;
@@ -303,13 +255,14 @@ function reduceJuegos(juegos) {
 function reduceJuegosPorInfluencia(juegos) {
 
     return (acc, partida) => {
-        // console.log("reduceJuegosPorInfluencia", acc, partida)
+         console.log("reduceJuegosPorInfluencia", acc, partida)
         if (!acc[partida[3]]) {
             acc[partida[3]] = {
                 total: 0,
                 name: juegos[partida[3]][1],
                 image: juegos[partida[3]][3],
-                weight: juegos[partida[3]][4]
+                weight: juegos[partida[3]][4],
+                url: juegos[partida[3]][1] + " - <a target='_blank' href='https://boardgamegeek.com/boardgame/" + partida[3] + "'>BGG</a>"
             }
         }
         acc[partida[3]].total += 1 * acc[partida[3]].weight;
@@ -412,5 +365,5 @@ function pintarTabla(data) {
             "gridjs:init": (grid) => { grid.sort(0, "desc") }
         },
         data: data,
-        }).render(document.getElementById("wrapper"));
+    }).render(document.getElementById("wrapper"));
 }
