@@ -293,7 +293,7 @@ function reduceLocations() {
             .filter(location => location && !["casa", "c.", "Cruz", "Nardos", "Pedro Vidal", "ECJ"].includes(location))
             .map(location => {
                 if (!acc[location]) {
-                    acc[location] = { total: 0, name: location, image: '' }
+                    acc[location] = { total: 0, name: location, image: 'assets/locations/'+location.toLowerCase()+'.png' }
                 }
                 acc[location].total += 1
             })
