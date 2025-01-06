@@ -1,0 +1,3 @@
+[diff "sqlite"]
+    binary = true
+    textconv = "echo .dump | sqlite3"

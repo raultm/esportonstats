@@ -290,7 +290,7 @@ function reduceJugadores(jugadores) {
 function reduceLocations() {
     return (acc, partida) => {
         partida.locations
-            .filter(location => location)
+            .filter(location => location && !["casa", ".c"].includes(location))
             .map(location => {
                 if (!acc[location]) {
                     acc[location] = { total: 0, name: location, image: '' }

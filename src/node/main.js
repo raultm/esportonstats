@@ -22,8 +22,8 @@ async function main() {
             console.log(`Fetched ${data.plays.length} plays for ${username} since ${since}`);
             await db.saveData(data)
             const lastDate = data.plays[0].date
-            const nextDate = addOneDay(lastDate)
-            await db.markUserAsProcessed(username, nextDate)
+            //const nextDate = addOneDay(lastDate)
+            await db.markUserAsProcessed(username, lastDate)
 
 
         } else {
