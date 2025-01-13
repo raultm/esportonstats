@@ -1,3 +1,5 @@
+locationsAdresses = ["casa", "c.", "Cruz", "Nardos", "Pedro Vidal", "ECJ", "Granados"]
+
 document.addEventListener('DOMContentLoaded', function () {
     const tabButtons = document.querySelectorAll('.tab-button');
     const tabPanes = document.querySelectorAll('.tab-pane');
@@ -290,7 +292,7 @@ function reduceJugadores(jugadores) {
 function reduceLocations() {
     return (acc, partida) => {
         partida.locations
-            .filter(location => location && !["casa", "c.", "Cruz", "Nardos", "Pedro Vidal", "ECJ"].includes(location))
+            .filter(location => location && !locationsAdresses.includes(location))
             .map(location => {
                 if (!acc[location]) {
                     acc[location] = { total: 0, name: location, image: 'assets/locations/'+location.toLowerCase()+'.png' }
