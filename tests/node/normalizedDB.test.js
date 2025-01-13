@@ -101,7 +101,7 @@ describe('normalizeDB', () => {
                 getPlayers: vi.fn().mockResolvedValue(playersFixture),
                 getLocations: vi.fn().mockResolvedValue(locationsFixture),
                 getGames: vi.fn().mockResolvedValue(gamesFixture),
-                getPlaysWithoutDuplicates: vi.fn().mockResolvedValue([])
+                getPlaysWithoutDuplicates: vi.fn().mockResolvedValue(playsFixture)
             };
             let db = normalizedDBBuilder();
 
@@ -110,7 +110,7 @@ describe('normalizeDB', () => {
             // console.log(jugadores)
             let juegos = await db.getJuegos()
 
-            expect(rawDB.getPlays).toHaveBeenCalled();
+            expect(rawDB.getPlaysWithoutDuplicates).toHaveBeenCalled();
             expect(rawDB.getPlayers).toHaveBeenCalled();
             expect(rawDB.getLocations).toHaveBeenCalled();
             expect(rawDB.getGames).toHaveBeenCalled();
