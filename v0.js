@@ -101,8 +101,8 @@ xhr.responseType = 'arraybuffer';
 xhr.onload = async e => {
     console.log("Leida sqlite")
     db = new SQL.Database(new Uint8Array(xhr.response))
-    const last3MonthsButtons = document.getElementById('3months');
-    last3MonthsButtons.click()
+    const onLoadButton = document.getElementById('week');
+    onLoadButton.click()
 }
 xhr.send();
 
