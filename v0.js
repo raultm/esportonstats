@@ -1,4 +1,4 @@
-locationsAdresses = ["casa", "c.", "Cruz", "Nardos", "Pedro Vidal", "ECJ", "Granados"]
+locationsAdresses = ["casa", "c.", "Cruz", "Nardos", "Pedro Vidal", "ECJ", "Granados", "o."]
 
 document.addEventListener('DOMContentLoaded', function () {
     const tabButtons = document.querySelectorAll('.tab-button');
@@ -28,6 +28,21 @@ document.addEventListener('DOMContentLoaded', function () {
         button.addEventListener('click', function () {
             const tabId = this.getAttribute('data-tab');
             showTab(tabId);
+        });
+    });
+
+    document.querySelectorAll('.game-item').forEach(item => {
+        console.log("aplicado click")
+        item.addEventListener('click', function () {
+            const gameId = this.getAttribute('data-game-id');
+            showDetail('game', gameId);
+        });
+    });
+
+    document.querySelectorAll('.user-item').forEach(item => {
+        item.addEventListener('click', function () {
+            const userId = this.getAttribute('data-user-id');
+            showDetail('user', userId);
         });
     });
 });
@@ -119,12 +134,12 @@ async function updateDashBoardData(startDate, endDate) {
     const locationsByPlays = document.getElementById("locations")
     renderList(gamesByInfluence, data.range.games.influence)
     renderList(gamesByPlays, data.range.games.played)
-    renderList(playersByPlays, data.range.users, "cambiarImagenJugador")
-    renderList(locationsByPlays, data.range.locations, "cambiarImagenLugar")
+    renderList(playersByPlays, data.range.users, {fallbackImages: "cambiarImagenJugador"})
+    renderList(locationsByPlays, data.range.locations, {fallbackImages: "cambiarImagenLugar"})
 }
 
-function renderList(element, data, fallbackImages = "cambiarImagenJuego") {
-    console.log("renderList", element, data)
+function renderList(element, data, options = { fallbackImages: "cambiarImagenJuego", itemType: "game-item" }) {
+    const { fallbackImages, itemType } = options
     if (!data) { return 'No Data' }
     element.innerHTML = data
         .map(item => {
@@ -155,14 +170,19 @@ function top5(entitesCount) {
 }
 
 function parsePlayForTable(record, juegos, jugadores) {
+    //console.log("parsePlayForTable", record[4], jugadores)
     //console.log("recordfortable", record, juegos, jugadores, juegos[record[3]][1])
+    //console.log(record[4])
+    //record[4].map(playerObj => {
+    //    console.log(playerObj, jugadores)
+    //})
     return {
         id: record[0],
         date: record[1],
         reporter: record[2],
         game: juegos[record[3]][1],
-        players: parsePlayers(JSON.parse(record[4])).map(playerObj => jugadores[playerObj.name][1]),
-        locations: JSON.parse(record[5]),
+        players: parsePlayers(record[4]).map(playerObj => jugadores[playerObj.name][1]),
+        locations: record[5],
     }
 }
 
@@ -173,8 +193,8 @@ function parsePlay(recorder, record, juegos, jugadores) {
         date: record[1],
         reporter: record[2],
         game: juegos[record[3]][1],
-        players: parsePlayers(JSON.parse(record[4])),
-        locations: JSON.parse(record[5]),
+        players: parsePlayers(record[4]),
+        locations: record[5],
     }
 }
 function parsePlayers(players) {
@@ -199,7 +219,7 @@ let jugadores;
 
 async function fetchDashboardData(startDate, endDate) {
     if (!partidas) {
-        partidas = execSQL("SELECT * FROM partidas")[0].values
+        partidas = execSQL("SELECT * FROM partidas ORDER BY id DESC")[0].values
     }
     if (!juegos) {
         juegos = arrayToObject(execSQL("SELECT * FROM juegos")[0].values)
@@ -215,7 +235,21 @@ async function fetchDashboardData(startDate, endDate) {
         "juego",
         "jugadores",
         "localizaciones"
-    ]
+    ];
+
+    const data = partidas.map(partida => {
+        console.log(partida)
+        partida[4] = JSON.parse(partida[4])
+        partida[5] = JSON.parse(partida[5])
+        return {
+            id: partida[0],
+            fecha: partida[1],
+            reportador: partida[2],
+            juego: `<a href="#" onclick="showDetail('game', ${partida[3]})">${juegos[partida[3]][1]}</a>`,
+            jugadores: partida[4].map(jugadorId => jugadores[jugadorId][1]).join(', '),
+            localizaciones: partida[5].join(', ')
+        };
+    });
 
     //console.log(partidas[0])
     let partidasRangoTiempo = []
@@ -369,3 +403,35 @@ function pintarTabla(data) {
         data: data,
     }).render(document.getElementById("wrapper"));
 }
+
+function showDetail(type, id) {
+    let title, image, recentGames, topItems;
+
+    if (type === 'game') {
+        const game = juegos[id];
+        if (!game) return;
+
+        title = game[1];
+        image = game[3];
+        recentGames = partidas.filter(partida => partida[3] === id).map(partida => partida[1]);
+        topItems = partidas.filter(partida => partida[3] === id).reduce(reduceJugadores(jugadores), {});
+    } else if (type === 'user') {
+        const user = jugadores[id];
+        if (!user) return;
+
+        title = user[1];
+        image = user[3];
+        recentGames = partidas.filter(partida => partida[4].includes(id)).map(partida => partida[1]);
+        topItems = partidas.filter(partida => partida[4].includes(id)).reduce(reduceJuegos(juegos), {});
+    }
+
+    document.getElementById('detail-title').innerText = title;
+    document.getElementById('detail-image').src = image;
+
+    renderList(document.getElementById('detail-recent-games'), recentGames.map(date => ({ name: date })), { fallbackImages: "cambiarImagenJuego", itemType: "date" });
+    renderList(document.getElementById('detail-top-items'), top5(topItems), { fallbackImages: "cambiarImagenJuego", itemType: type === 'game' ? 'user' : 'game' });
+
+    document.querySelectorAll('.tab-pane').forEach(pane => pane.classList.remove('active'));
+    document.getElementById('detail-section').classList.add('active');
+}
+
