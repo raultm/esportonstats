@@ -239,8 +239,8 @@ async function fetchDashboardData(startDate, endDate) {
 
     const data = partidas.map(partida => {
         console.log(partida)
-        partida[4] = JSON.parse(partida[4])
-        partida[5] = JSON.parse(partida[5])
+        partida[4] = partida[4].constructor === Array ? partida[4] : JSON.parse(partida[4])
+        partida[5] = partida[5].constructor === Array ? partida[5] : JSON.parse(partida[5])
         return {
             id: partida[0],
             fecha: partida[1],
