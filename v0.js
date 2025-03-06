@@ -1,4 +1,4 @@
-locationsAdresses = ["casa", "c.", "Cruz", "Nardos", "Pedro Vidal", "ECJ", "Granados", "o."]
+locationsAdresses = ["casa", "c.", "Cruz", "Nardos", "Pedro Vidal", "ECJ", "Granados", "o.", "San Pablo"]
 
 document.addEventListener('DOMContentLoaded', function () {
     const tabButtons = document.querySelectorAll('.tab-button');
